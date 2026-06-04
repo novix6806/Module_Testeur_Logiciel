@@ -1,0 +1,158 @@
+Algo meteo
+# si la température est inferieur a 2 degres alors risque de verglas
+Variable temperature : entier
+Constante LIMITE_VERGLAS : entier <- 2 
+Constante PAS_CHAUD : entier <- 15 
+Constante BONNE : entier <- 30  
+Début 
+	temperature <- saisir("Quelle est la temperature actuelle")
+	Si temperature < LIMITE_VERGLAS Alors
+		écrire("Risque de verglas")
+	Sinon
+		Si temperature	< PAS_CHAUD Alors
+			écrire("Ce n'est pas chaud")
+		Sinon
+			Si temperature< BONNE Alors
+				écrire("Bonne temperature")
+			Sinon
+				écrire("Trop chaud !")
+			FSi
+		FSi
+	FSi	
+Fin
+ 
+ 
+ Algo nomDuMois
+# Saisit un numéro de mois et affiche le nom du mois
+Variable numMois : entier
+Début
+ numMois <- saisir("Entrez le numéro du mois : ")
+ Selon numMois
+ Cas 1 : ecrire("Janvier")
+ Cas 2 : ecrire("Février")
+ Cas 3 : ecrire("Mars")
+ Cas 4 : ecrire("Avril")
+ Cas 5 : ecrire("Mai")
+ Cas 6 : ecrire("Juin")
+ Cas 7 : ecrire("Juillet")
+ Cas 8 : ecrire("Août")
+ Cas 9 : ecrire("Septembre")
+ Cas 10 : ecrire("Octobre")
+ Cas 11 : ecrire("Novembre")
+ Cas 12 : ecrire("Décembre")
+ Autre : ecrire("Saisie Incorrecte")
+ FSelon
+Fin
+
+
+Algo Cuisson
+# Indique le temps de cuisson
+Variable viande : entier
+Variable cuisson : entier
+Variable poids : entier
+Variable coefficient : réel
+Constante BOEUF : entier <- 1
+Constante AGNEAU: entier <- 2
+Constante BLEU : entier <- 1 
+Constante A_POINT : entier <- 2
+Constante BIEN_CUIT : entier <- 3
+Constante UNE_MINUTE: entier <- 60
+Constante BLEU_B : réel <- 10/500
+Constante BLEU_A : réel <- 15/400
+Constante A_PT_B : réel <- 17/500
+Constante A_PT_A : réel <- 25/400
+Constante B_CU_B : réel <- 25/500
+Constante B_CU_A : réel <- 40/400
+Début
+   ecrire("Viande ?")  # Choix du type de viande
+   ecrire(BOEUF & " – Bœuf")
+   ecrire(AGNEAU & " – Agneau")
+   viande <- saisir()
+   ecrire("Cuisson ?")  # Choix du type de cuisson
+   ecrire(BLEU & " – Bleu")
+   ecrire(A_POINT & " – A point")
+   ecrire(BIEN_CUIT & " – Bien cuit")
+   cuisson <- saisir()
+   poids <- saisir("Poids en gramme ?")  # Choix du poids de la viande
+   Si viande = BOEUF Alors
+     Selon cuisson
+       cas BLEU : coefficient <- BLEU_B 
+       cas A_POINT : coefficient <- A_PT_B
+       autre : coefficient <- B_CU_B
+   FSelon
+   Sinon
+     Selon cuisson
+       cas BLEU : coefficient <- BLEU_A
+       cas A_POINT : coefficient <- A_PT_A
+       autre : coefficient <- B_CU_A
+   FSelon
+ FSi
+ ecrire("Le temps de cuisson est de " & poids × coefficient × UNE_MINUTE & " secondes")
+Fin
+
+
+Algo moyenneDesNotes
+# Saisit des valeurs et calcule de la moyenne 
+Variable nbVal, cpt : entier
+Variable moyenne, saisie : réel 
+Début
+   moyenne <- 0 
+   nbVal <- saisir("Entrer le nombre de notes : ")
+   Si nbVal ≤ 0 Alors
+       ecrire("Le nombre de valeurs doit être strictement positif")
+   Sinon
+       Pour cpt <- 1 à nbVal 
+           saisie <- saisir("Valeur : ")
+           moyenne <- moyenne + saisie / nbVal 
+       FPour 
+       ecrire("La moyenne est " & moyenne)
+   FSi 
+Fin
+
+Algo MoyenneDesNotesV2
+# Calcule la moyenne des notes saisies par l’utilisateur
+# L’utilisateur saisit -1 pour finir la saisie
+Variable nbVal : entier <- 0 
+Variable saisie, total : réel
+Constante STOP : entier <- -1 
+Début
+ total <- 0 
+ saisie <- saisir ("Note (" & STOP & "pour terminer) ?")
+ TantQue saisie ≠ STOP
+    total <- total + saisie
+    nbVal <- nbVal + 1
+    saisie <- saisir ("Note (" & STOP & "pour terminer) ?")
+   Ftq 
+   Si nbVal ≠ 0 Alors
+       ecrire("La moyenne des notes est de " & total/nbVal)
+   Sinon
+   ecrire("Aucune note n’a été saisie")
+ FSi 
+Fin
+
+
+Algo nbOcc
+# Saisit des chiffres et calcule le nombre d’occurrence de chacun 
+Constante TAILLE : entier <- 10 Constante STOP : entier <- -1 
+Variable tab : entier[TAILLE] Variable i, valeur : entier
+Début
+ # Initialisation du tableau
+ Pour i <- 0 à TAILLE-1
+     tab[i] <- 0
+ FPour
+ # Saisie des valeurs
+ valeur <- saisir("Entrer une valeur comprise entre 0 et " & TAILLE-1 & " : ")
+ TantQue valeur ≠ STOP
+   Si valeur < 0 Ou valeur >= TAILLE Alors
+     ecrire("N’est pas une valeur entre 0 et " & TAILLE-1 & " !")
+   Sinon
+     tab[valeur] <- tab[valeur] + 1
+   FSi
+   valeur <- saisir("Autre valeur, svp : ")
+ FTq
+ # Affichage des résultats
+ Pour i <- 0 à TAILLE-1
+   ecrire("Nombre de " & i & " : " & tab[i])
+ FPour
+Fin
+
