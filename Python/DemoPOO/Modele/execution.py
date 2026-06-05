@@ -1,11 +1,13 @@
-if __package__ in (None, ""):
-    import sys
-    from pathlib import Path
+# if __package__ in (None, ""):
+#     import sys
+#     from pathlib import Path
 
-    sys.path.append(str(Path(__file__).resolve().parent.parent))
-    from Modele.Vehicule import Voiture
-else:
-    from .Vehicule import Voiture
+#     sys.path.append(str(Path(__file__).resolve().parent.parent))
+#     from Modele.Vehicule import Voiture
+# else:
+#     from .Vehicule import Voiture
+
+from Vehicule import Voiture
 
 une_voiture = Voiture()
 une_voiture.set_marque ( "Citroën")
