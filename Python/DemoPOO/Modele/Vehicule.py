@@ -80,6 +80,7 @@ class Voiture:
 
     @puissance.setter
     def puissance(self, value: int):
+        print("Set Puissance")
         if value < 0:
             value = 0  # Pas de valeur négative
         self.__puissance = value

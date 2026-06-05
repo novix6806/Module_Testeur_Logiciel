@@ -7,7 +7,7 @@
 # else:
 #     from .Vehicule import Voiture
 
-from Vehicule import Voiture
+from Modele.Vehicule import Voiture
 
 une_voiture = Voiture()
 une_voiture.set_marque ( "Citroën")
