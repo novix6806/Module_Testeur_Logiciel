@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mantis><issue><project>TP</project><summary>DÉFAUT-001: Acceptation de prix négatifs</summary><description>L'application accepte des valeurs négatives pour le prix initial, contraire à REQ-001.</description><category>Défauts</category><severity>critical</severity><priority>high</priority><steps_to_reproduce>Ouvrir l'application
+Saisir -50
+Saisir 10%
+Saisir 1
+Client régulier
+Calculer</steps_to_reproduce><expected_results>Message: Le prix initial doit être &gt;= 0.01€</expected_results></issue><issue><project>TP</project><summary>DÉFAUT-002: Acceptation de réductions &gt; 100%</summary><description>L'application accepte des réductions supérieures à 100%, violant REQ-002.</description><category>Défauts</category><severity>critical</severity><priority>high</priority><steps_to_reproduce>Ouvrir l'application
+Prix 100
+Réduction 150%
+Quantité 1
+Client régulier
+Calculer</steps_to_reproduce><expected_results>Message: La réduction ne peut pas dépasser 100%</expected_results></issue><issue><project>TP</project><summary>DÉFAUT-003: Pas de limite supérieure quantité</summary><description>L'application accepte des quantités &gt; 999, contraire à REQ-003.</description><category>Défauts</category><severity>major</severity><priority>normal</priority><steps_to_reproduce>Ouvrir l'application
+Prix 100
+Réduction 0
+Quantité 1000
+Client régulier
+Calculer</steps_to_reproduce><expected_results>Message: La quantité ne peut pas dépasser 999</expected_results></issue><issue><project>TP</project><summary>DÉFAUT-004: Réduction VIP non appliquée</summary><description>La réduction VIP supplémentaire n'est pas appliquée conformément à REQ-004.</description><category>Défauts</category><severity>major</severity><priority>high</priority><steps_to_reproduce>Ouvrir l'application
+Prix 100
+Réduction 20%
+Quantité 1
+Client VIP
+Calculer</steps_to_reproduce><expected_results>Prix final attendu: 75€</expected_results></issue><issue><project>TP</project><summary>DÉFAUT-005: Carte fidélité mal appliquée</summary><description>La carte fidélité s'applique malgré une réduction &gt;= 50%, violant REQ-005.</description><category>Défauts</category><severity>major</severity><priority>normal</priority><steps_to_reproduce>Ouvrir l'application
+Prix 100
+Réduction 50%
+Quantité 1
+Client régulier + fidélité
+Calculer</steps_to_reproduce><expected_results>Prix final attendu: 50€</expected_results></issue><issue><project>TP</project><summary>DÉFAUT-006: Pas de plafond de réduction à 90%</summary><description>La réduction totale peut dépasser 90% malgré REQ-006.</description><category>Défauts</category><severity>major</severity><priority>high</priority><steps_to_reproduce>Ouvrir l'application
+Prix 100
+Réduction 85%
+Employé + fidélité
+Calculer</steps_to_reproduce><expected_results>Prix final attendu: 10€</expected_results></issue><issue><project>TP</project><summary>DÉFAUT-007: Erreur pour prix 0.01€</summary><description>Le calcul est incorrect pour 0.01€, forcé à 0€.</description><category>Défauts</category><severity>minor</severity><priority>low</priority><steps_to_reproduce>Ouvrir l'application
+Prix 0.01
+Réduction 10%
+Quantité 1
+Client régulier
+Calculer</steps_to_reproduce><expected_results>Prix final attendu: 0.01€</expected_results></issue></mantis>

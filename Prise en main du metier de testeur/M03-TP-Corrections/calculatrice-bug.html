@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .calculator {
+            background: #2d3436;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            width: 320px;
+        }
+
+        .display {
+            background: #1e272e;
+            color: #00ff88;
+            font-size: 2.5em;
+            padding: 20px;
+            text-align: right;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            min-height: 80px;
+            word-wrap: break-word;
+            overflow: hidden;
+            font-family: 'Courier New', monospace;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        button {
+            padding: 20px;
+            font-size: 1.3em;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: 600;
+            color: white;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .number {
+            background: #636e72;
+        }
+
+        .number:hover {
+            background: #747d8c;
+        }
+
+        .operator {
+            background: #e17055;
+        }
+
+        .operator:hover {
+            background: #ff7675;
+        }
+
+        .equals {
+            background: #00b894;
+            grid-column: span 2;
+        }
+
+        .equals:hover {
+            background: #00cec9;
+        }
+
+        .function {
+            background: #0984e3;
+        }
+
+        .function:hover {
+            background: #74b9ff;
+        }
+
+        .memory {
+            background: #6c5ce7;
+            font-size: 1em;
+        }
+
+        .memory:hover {
+            background: #a29bfe;
+        }
+
+        .zero {
+            grid-column: span 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="display" id="display">0</div>
+        <div class="buttons">
+            <button class="memory" onclick="memoryRecall()">MR</button>
+            <button class="memory" onclick="memoryClear()">MC</button>
+            <button class="memory" onclick="memoryAdd()">M+</button>
+            <button class="memory" onclick="memorySubtract()">M-</button>
+            
+            <button class="function" onclick="clearEntry()">CE</button>
+            <button class="function" onclick="clearAll()">C</button>
+            <button class="function" onclick="toggleSign()">+/−</button>
+            <button class="operator" onclick="setOperator('÷')">÷</button>
+            
+            <button class="number" onclick="appendNumber('7')">7</button>
+            <button class="number" onclick="appendNumber('8')">8</button>
+            <button class="number" onclick="appendNumber('9')">9</button>
+            <button class="operator" onclick="setOperator('×')">×</button>
+            
+            <button class="number" onclick="appendNumber('4')">4</button>
+            <button class="number" onclick="appendNumber('5')">5</button>
+            <button class="number" onclick="appendNumber('6')">6</button>
+            <button class="operator" onclick="setOperator('−')">−</button>
+            
+            <button class="number" onclick="appendNumber('1')">1</button>
+            <button class="number" onclick="appendNumber('2')">2</button>
+            <button class="number" onclick="appendNumber('3')">3</button>
+            <button class="operator" onclick="setOperator('+')">+</button>
+            
+            <button class="number zero" onclick="appendNumber('0')">0</button>
+            <button class="number" onclick="appendNumber('.')">.</button>
+            <button class="equals" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+    <script>
+        let currentValue = '0';
+        let previousValue = null;
+        let operator = null;
+        let waitingForOperand = false;
+        let memory = 0;
+        let memorySet = false; // Bug O4: variable qui ne se réinitialise pas correctement
+
+        const display = document.getElementById('display');
+
+        function updateDisplay() {
+            // Bug O5: Pas de gestion des grands nombres
+            display.textContent = currentValue;
+        }
+
+        function appendNumber(num) {
+            // Bug O6: Pas de réinitialisation correcte après erreur
+            if (currentValue === '0' || waitingForOperand) {
+                currentValue = num;
+                waitingForOperand = false;
+            } else {
+                currentValue += num;
+            }
+            updateDisplay();
+        }
+
+        function setOperator(op) {
+            // Bug O3: Accepte les doubles opérateurs
+            if (previousValue === null) {
+                previousValue = parseFloat(currentValue);
+            } else if (operator && !waitingForOperand) {
+                calculate();
+                previousValue = parseFloat(currentValue);
+            }
+            
+            operator = op;
+            waitingForOperand = true;
+        }
+
+        function calculate() {
+            if (operator === null || previousValue === null) {
+                return;
+            }
+
+            const prev = previousValue;
+            const current = parseFloat(currentValue);
+            let result;
+
+            switch (operator) {
+                case '+':
+                    result = prev + current;
+                    break;
+                case '−':
+                    result = prev - current;
+                    break;
+                case '×':
+                    result = prev * current;
+                    break;
+                case '÷':
+                    // Bug O1: Division par zéro retourne 0
+                    if (current === 0) {
+                        result = 0;
+                    } else {
+                        result = prev / current;
+                    }
+                    break;
+            }
+
+            currentValue = result.toString();
+            previousValue = result; // Bug O2: Permet le calcul en chaîne (comportement correct ici)
+            operator = null;
+            waitingForOperand = true;
+            updateDisplay();
+        }
+
+        function clearEntry() {
+            currentValue = '0';
+            updateDisplay();
+        }
+
+        function clearAll() {
+            currentValue = '0';
+            previousValue = null;
+            operator = null;
+            waitingForOperand = false;
+            updateDisplay();
+        }
+
+        function toggleSign() {
+            // Bug O7: Ne fonctionne que si un nombre est affiché (comportement correct)
+            if (currentValue !== '0') {
+                currentValue = (parseFloat(currentValue) * -1).toString();
+                updateDisplay();
+            }
+        }
+
+        function memoryAdd() {
+            memory += parseFloat(currentValue);
+            memorySet = true;
+        }
+
+        function memorySubtract() {
+            memory -= parseFloat(currentValue);
+            memorySet = true;
+        }
+
+        function memoryRecall() {
+            if (memorySet) {
+                currentValue = memory.toString();
+                updateDisplay();
+            }
+        }
+
+        function memoryClear() {
+            // Bug O4: MC ne vide pas correctement la mémoire
+            // La variable memorySet ne passe pas à false
+            memory = 0;
+        }
+
+        updateDisplay();
+    </script>
+</body>
+</html>
