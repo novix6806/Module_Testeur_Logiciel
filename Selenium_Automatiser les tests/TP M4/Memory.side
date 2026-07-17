@@ -1,0 +1,59 @@
+{
+  "id": "c1ad382a-9550-4d27-aa90-6ed16fb49b7c",
+  "version": "2.0",
+  "name": "Memory",
+  "url": "https://enijdenis.github.io",
+  "tests": [{
+    "id": "058ccc8b-e3c7-4f3b-983a-40837c0d2166",
+    "name": "Page_acceuil",
+    "commands": [{
+      "id": "7131e7e0-056c-427c-9f76-234184b795ec",
+      "comment": "",
+      "command": "open",
+      "target": "https://enijdenis.github.io/memory/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "034dc942-0c9f-49fe-bf12-ea2a69702ce6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1336x761",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7f28b658-3bce-4a8a-90c2-8a25009a92a0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Accueil",
+      "targets": [
+        ["linkText=Accueil", "linkText"],
+        ["css=li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Accueil')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'index.html')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Accueil')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b30088c3-f87e-41cb-9dd6-e68f7c396668",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=/html/body/div/p[1]",
+      "targets": [
+        ["css=body", "css:finder"],
+        ["xpath=//body", "xpath:position"]
+      ],
+      "value": "Bienvenue sur le site du Memory de l'ENI."
+    }]
+  }],
+  "suites": [{
+    "id": "2e3072e5-9d84-4c14-b0ee-638981e414dc",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["058ccc8b-e3c7-4f3b-983a-40837c0d2166"]
+  }],
+  "urls": ["https://enijdenis.github.io/"],
+  "plugins": []
+}

@@ -1,0 +1,1543 @@
+{
+  "id": "0addc0a7-0aec-4f67-aca3-2b32aca64a60",
+  "version": "3.0",
+  "name": "Tp memory",
+  "url": "http://www.google.com",
+  "urls": [
+    "http://www.google.com"
+  ],
+  "plugins": [],
+  "suites": [
+    {
+      "id": "37dfab58-d009-427a-9a98-e76e90f49bec",
+      "name": "suite de tests",
+      "parallel": false,
+      "persistSession": false,
+      "tests": [
+        "ecb911f1-fdf6-4c78-adee-0b95944a8cf0",
+        "005a2b42-2a4e-4885-83c2-9fe7f81d9612",
+        "f575f545-07ae-4b41-b18c-7179f825b19c",
+        "cedbb1c8-25a6-436e-bfdd-dea11525980b",
+        "9799389d-acf3-440a-83b0-a94009446cf2",
+        "6e7530fa-f552-4d7e-8240-8cc467840cb7",
+        "35017d41-f29f-4891-a70f-0ee7b8dda1cd"
+      ],
+      "timeout": 30000
+    }
+  ],
+  "tests": [
+    {
+      "id": "35017d41-f29f-4891-a70f-0ee7b8dda1cd",
+      "name": "New Test",
+      "commands": [
+        {
+          "id": "e906350a-0b1e-45e0-b2ef-9f55add472aa",
+          "command": "open",
+          "target": "https://enijdenis.github.io/memory/index.html",
+          "value": ""
+        },
+        {
+          "command": "click",
+          "target": "linkText=S'inscrire",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "f325190b-a7f5-46a8-a004-4638954d1659",
+          "targets": [
+            [
+              "linkText=S'inscrire",
+              "linkText"
+            ],
+            [
+              "css=li:nth-child(2) > a",
+              "css:finder"
+            ],
+            [
+              "xpath=(//a[contains(@href, 'formulaireInscrire.html')])[1]",
+              "xpath:href"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "id=user",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "fb24ffe7-9b54-4326-a5d9-c68ca08f7229",
+          "targets": [
+            [
+              "id=user",
+              "id"
+            ],
+            [
+              "css=#user",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='user'])[1]",
+              "xpath:attributes"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "id=user",
+          "value": "test",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "4081665d-afad-4a62-ad87-57b7defa78e8",
+          "targets": [
+            [
+              "id=user",
+              "id"
+            ],
+            [
+              "css=#user",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='user'])[1]",
+              "xpath:attributes"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "id=email",
+          "value": "test@test.com",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "cac8e259-f992-4967-9d82-4fb1559bdddf",
+          "targets": [
+            [
+              "id=email",
+              "id"
+            ],
+            [
+              "css=#email",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='email'])[1]",
+              "xpath:attributes"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "id=password",
+          "value": "12Mdp@",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "5488ca9d-f026-40ec-a54c-bc3c75e7704e",
+          "targets": [
+            [
+              "id=password",
+              "id"
+            ],
+            [
+              "css=#password",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='password'])[1]",
+              "xpath:attributes"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "id=psw-confirmation",
+          "value": "12Mdp@",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "e66847a9-8fc5-4c7c-99b3-8ad1af0c81ef",
+          "targets": [
+            [
+              "id=psw-confirmation",
+              "id"
+            ],
+            [
+              "css=#psw-confirmation",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='psw-confirmation'])[1]",
+              "xpath:attributes"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=button:nth-child(1)",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "938f2c8d-c3ed-4dab-bdb6-5a4c5c25c998",
+          "targets": [
+            [
+              "css=button:nth-child(1)",
+              "css:finder"
+            ],
+            [
+              "xpath=(//button[@type='submit' and text()='Création du compte'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=//button[contains(.,'Création du compte')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "assertTitle",
+          "target": "ENI-MEMORY-Connecter",
+          "value": "",
+          "id": "f50ffe3e-17ba-4427-a0a1-4be5ce0c05de"
+        }
+      ]
+    },
+    {
+      "id": "6e7530fa-f552-4d7e-8240-8cc467840cb7",
+      "name": "test_accueil",
+      "commands": [
+        {
+          "id": "91b62508-e63f-4ac5-9876-6a825cbca65f",
+          "command": "open",
+          "target": "https://enijdenis.github.io/memory/index.html",
+          "value": ""
+        },
+        {
+          "command": "click",
+          "target": "linkText=Accueil",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "66d03c88-23f9-4bf9-830e-85a4c6098e10",
+          "targets": [
+            [
+              "linkText=Accueil",
+              "linkText"
+            ],
+            [
+              "css=li:nth-child(1) > a",
+              "css:finder"
+            ],
+            [
+              "xpath=(//a[contains(text(),'Accueil')])[1]",
+              "xpath:link"
+            ],
+            [
+              "xpath=(//a[contains(@href, 'index.html')])[1]",
+              "xpath:href"
+            ],
+            [
+              "xpath=//a[contains(.,'Accueil')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "assertText",
+          "target": "xpath=/html/body/div/p[1]",
+          "value": "Bienvenue sur le site du Memory de l'ENI.",
+          "id": "e84b7d88-2d7b-41dc-b141-a62f00dd5ce7",
+          "fallbackTargets": [
+            [
+              "css=p:nth-child(1)",
+              "css:finder"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ecb911f1-fdf6-4c78-adee-0b95944a8cf0",
+      "name": "test_user_ko",
+      "commands": [
+        {
+          "id": "c8e661bc-fa2d-4ebc-836a-9974d50192ef",
+          "command": "open",
+          "target": "https://enijdenis.github.io/memory/index.html",
+          "value": ""
+        },
+        {
+          "command": "click",
+          "target": "linkText=S'inscrire",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "7de1a042-d48d-4316-b87f-103507fe1ea3",
+          "targets": [
+            [
+              "linkText=S'inscrire",
+              "linkText"
+            ],
+            [
+              "css=li:nth-child(2) > a",
+              "css:finder"
+            ],
+            [
+              "xpath=(//a[contains(@href, 'formulaireInscrire.html')])[1]",
+              "xpath:href"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "id=user",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "65b31ef3-8c59-45ee-8d91-ecc0eade4b70",
+          "targets": [
+            [
+              "id=user",
+              "id"
+            ],
+            [
+              "css=#user",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='user'])[1]",
+              "xpath:attributes"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "id=user",
+          "value": "te",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "d5590250-3440-40f7-a3e3-4ea30c840e0a",
+          "targets": [
+            [
+              "id=user",
+              "id"
+            ],
+            [
+              "css=#user",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='user'])[1]",
+              "xpath:attributes"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "id=email",
+          "value": "test@test.com",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "4fda48c5-a8e8-4e42-a623-d6d8011c16ec",
+          "targets": [
+            [
+              "id=email",
+              "id"
+            ],
+            [
+              "css=#email",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='email'])[1]",
+              "xpath:attributes"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "id=password",
+          "value": "Lagun@6806",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "81f34983-0fbd-45c3-88f5-bd33e7834f76",
+          "targets": [
+            [
+              "id=password",
+              "id"
+            ],
+            [
+              "css=#password",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='password'])[1]",
+              "xpath:attributes"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "id=psw-confirmation",
+          "value": "Lagun@6806",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "549769ff-61f1-4db8-85c9-cd2c52b3c29a",
+          "targets": [
+            [
+              "id=psw-confirmation",
+              "id"
+            ],
+            [
+              "css=#psw-confirmation",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='psw-confirmation'])[1]",
+              "xpath:attributes"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=button:nth-child(1)",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "49737605-7313-4ed3-a64d-85ab97bb1990",
+          "targets": [
+            [
+              "css=button:nth-child(1)",
+              "css:finder"
+            ],
+            [
+              "xpath=(//button[@type='submit' and text()='Création du compte'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=//button[contains(.,'Création du compte')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "assertText",
+          "target": "css=.input-group:nth-child(1) > .error-msg",
+          "value": "Choisissez un pseudo contenant au moins 3 caractères.",
+          "id": "3d44403e-b479-4f22-856c-7600ac8b6b06",
+          "fallbackTargets": [
+            [
+              "css=.input-group:nth-child(1) > .error-msg",
+              "css:finder"
+            ],
+            [
+              "xpath=//span[contains(.,'Choisissez un pseudo contenant au moins 3 caractères.')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "waitForElementPresent",
+          "target": "css=.shake",
+          "value": "2000",
+          "id": "27379f69-2ff9-4c98-8295-bc756df5f4f8"
+        }
+      ]
+    },
+    {
+      "id": "005a2b42-2a4e-4885-83c2-9fe7f81d9612",
+      "name": "test_mail_ko",
+      "commands": [
+        {
+          "id": "590c4708-6d89-4c07-87bc-51179b266ff6",
+          "command": "open",
+          "target": "https://enijdenis.github.io/memory/index.html",
+          "value": ""
+        },
+        {
+          "command": "click",
+          "target": "linkText=S'inscrire",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "c17c8058-f5a2-4c03-bbac-784303dc4273",
+          "targets": [
+            [
+              "linkText=S'inscrire",
+              "linkText"
+            ],
+            [
+              "css=li:nth-child(2) > a",
+              "css:finder"
+            ],
+            [
+              "xpath=(//a[contains(@href, 'formulaireInscrire.html')])[1]",
+              "xpath:href"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "id=user",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "0a67bbbd-12c4-4090-8296-890d0a76e211",
+          "targets": [
+            [
+              "id=user",
+              "id"
+            ],
+            [
+              "css=#user",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='user'])[1]",
+              "xpath:attributes"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "id=user",
+          "value": "test",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "ef678990-5b6e-4f69-8c2a-062d8c0943b7",
+          "targets": [
+            [
+              "id=user",
+              "id"
+            ],
+            [
+              "css=#user",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='user'])[1]",
+              "xpath:attributes"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "id=email",
+          "value": "test@test",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "38b5aa7f-c02c-47ef-b527-90d46c7094fc",
+          "targets": [
+            [
+              "id=email",
+              "id"
+            ],
+            [
+              "css=#email",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='email'])[1]",
+              "xpath:attributes"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "id=password",
+          "value": "Lagun@6806",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "7478a9bf-084c-46d7-a508-115a436cf12e",
+          "targets": [
+            [
+              "id=password",
+              "id"
+            ],
+            [
+              "css=#password",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='password'])[1]",
+              "xpath:attributes"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "id=psw-confirmation",
+          "value": "Lagun@6806",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "bb2052df-173c-44d5-91bd-a8a017d739ec",
+          "targets": [
+            [
+              "id=psw-confirmation",
+              "id"
+            ],
+            [
+              "css=#psw-confirmation",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='psw-confirmation'])[1]",
+              "xpath:attributes"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=button:nth-child(1)",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "1dcf8326-65a8-4e34-8972-f22073b1d2a2",
+          "targets": [
+            [
+              "css=button:nth-child(1)",
+              "css:finder"
+            ],
+            [
+              "xpath=(//button[@type='submit' and text()='Création du compte'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=//button[contains(.,'Création du compte')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "assertText",
+          "target": "css=.input-group:nth-child(2) > .error-msg",
+          "value": "Rentrez un email valide.",
+          "fallbackTargets": [
+            [
+              "css=.input-group:nth-child(2) > .error-msg",
+              "css:finder"
+            ],
+            [
+              "xpath=//span[contains(.,'Rentrez un email valide.')]",
+              "xpath:innerText"
+            ]
+          ],
+          "id": "b161c4b8-1eb2-4fad-9ba8-bb1f98046ed9"
+        },
+        {
+          "command": "waitForElementPresent",
+          "target": "css=.shake",
+          "value": "2000",
+          "id": "2d042644-205a-49ea-bbc0-57d991ac4cdd"
+        }
+      ]
+    },
+    {
+      "id": "cedbb1c8-25a6-436e-bfdd-dea11525980b",
+      "name": "test_connexion_ok",
+      "commands": [
+        {
+          "command": "open",
+          "target": "https://enijdenis.github.io/memory/index.html",
+          "value": "",
+          "id": "7066eff7-5bd0-4747-a715-91993a2541fc"
+        },
+        {
+          "command": "click",
+          "target": "linkText=S'inscrire",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "targets": [
+            [
+              "linkText=S'inscrire",
+              "linkText"
+            ],
+            [
+              "css=li:nth-child(2) > a",
+              "css:finder"
+            ],
+            [
+              "xpath=(//a[contains(@href, 'formulaireInscrire.html')])[1]",
+              "xpath:href"
+            ]
+          ],
+          "id": "e34fdf28-332a-4e94-aab6-164d678ffbe3"
+        },
+        {
+          "command": "click",
+          "target": "id=user",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "targets": [
+            [
+              "id=user",
+              "id"
+            ],
+            [
+              "css=#user",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='user'])[1]",
+              "xpath:attributes"
+            ]
+          ],
+          "id": "09cdca7f-2b40-4b84-9212-2f54f844e2cc"
+        },
+        {
+          "command": "type",
+          "target": "id=user",
+          "value": "test",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "targets": [
+            [
+              "id=user",
+              "id"
+            ],
+            [
+              "css=#user",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='user'])[1]",
+              "xpath:attributes"
+            ]
+          ],
+          "id": "210974a4-9fe5-47ea-82f4-02e87637415e"
+        },
+        {
+          "command": "type",
+          "target": "id=email",
+          "value": "test@test.com",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "targets": [
+            [
+              "id=email",
+              "id"
+            ],
+            [
+              "css=#email",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='email'])[1]",
+              "xpath:attributes"
+            ]
+          ],
+          "id": "02ca495c-c3a4-492c-80a4-e7e6f7150f24"
+        },
+        {
+          "command": "type",
+          "target": "id=password",
+          "value": "12Mdp@",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "targets": [
+            [
+              "id=password",
+              "id"
+            ],
+            [
+              "css=#password",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='password'])[1]",
+              "xpath:attributes"
+            ]
+          ],
+          "id": "7aef428e-fcd8-4d40-8cf3-f94caf8db830"
+        },
+        {
+          "command": "type",
+          "target": "id=psw-confirmation",
+          "value": "12Mdp@",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "targets": [
+            [
+              "id=psw-confirmation",
+              "id"
+            ],
+            [
+              "css=#psw-confirmation",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='psw-confirmation'])[1]",
+              "xpath:attributes"
+            ]
+          ],
+          "id": "74a8e733-b066-4e93-932e-6fc4a60250a2"
+        },
+        {
+          "command": "click",
+          "target": "css=button:nth-child(1)",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "targets": [
+            [
+              "css=button:nth-child(1)",
+              "css:finder"
+            ],
+            [
+              "xpath=(//button[@type='submit' and text()='Création du compte'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=//button[contains(.,'Création du compte')]",
+              "xpath:innerText"
+            ]
+          ],
+          "id": "953c5db6-8bf2-4add-92da-08b25b7bf790"
+        },
+        {
+          "command": "assertTitle",
+          "target": "ENI-MEMORY-Connecter",
+          "value": "",
+          "id": "7a4c1004-6f61-45b3-b0b0-28721013129e"
+        },
+        {
+          "command": "click",
+          "target": "id=email",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "c4cc01a7-36fb-45f7-a93b-4922af7065c1",
+          "targets": [
+            [
+              "id=email",
+              "id"
+            ],
+            [
+              "css=#email",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='email'])[1]",
+              "xpath:attributes"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "id=email",
+          "value": "test@test.com",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "9f2a0b5f-6cbf-4893-bc20-03de06800589",
+          "targets": [
+            [
+              "id=email",
+              "id"
+            ],
+            [
+              "css=#email",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='email'])[1]",
+              "xpath:attributes"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "id=password",
+          "value": "12Mdp@",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "0ba5ee62-7ff9-4aed-b872-5a46148e3a6c",
+          "targets": [
+            [
+              "id=password",
+              "id"
+            ],
+            [
+              "css=#password",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='password'])[1]",
+              "xpath:attributes"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=button:nth-child(1)",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "d524b003-178e-4517-b474-acd88f2201c3",
+          "targets": [
+            [
+              "css=button:nth-child(1)",
+              "css:finder"
+            ],
+            [
+              "xpath=(//button[@type='submit' and text()='Se connecter'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=//button[contains(.,'Se connecter')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "assertTitle",
+          "target": "ENI-MEMORY-Profil",
+          "value": "",
+          "id": "41c538c2-5dfd-45a7-82f9-98853f83fbfa"
+        }
+      ]
+    },
+    {
+      "id": "9799389d-acf3-440a-83b0-a94009446cf2",
+      "name": "test_connexion_mdp_ko",
+      "commands": [
+        {
+          "command": "open",
+          "target": "https://enijdenis.github.io/memory/index.html",
+          "value": "",
+          "id": "d17d4b19-4a80-4766-9b59-649bcb55a25a"
+        },
+        {
+          "command": "click",
+          "target": "linkText=S'inscrire",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "targets": [
+            [
+              "linkText=S'inscrire",
+              "linkText"
+            ],
+            [
+              "css=li:nth-child(2) > a",
+              "css:finder"
+            ],
+            [
+              "xpath=(//a[contains(@href, 'formulaireInscrire.html')])[1]",
+              "xpath:href"
+            ]
+          ],
+          "id": "d12b86d7-21d1-4770-9f8d-545140a8c1da"
+        },
+        {
+          "command": "click",
+          "target": "id=user",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "targets": [
+            [
+              "id=user",
+              "id"
+            ],
+            [
+              "css=#user",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='user'])[1]",
+              "xpath:attributes"
+            ]
+          ],
+          "id": "3292737e-6494-4fd0-851d-22c0e1993289"
+        },
+        {
+          "command": "type",
+          "target": "id=user",
+          "value": "test",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "targets": [
+            [
+              "id=user",
+              "id"
+            ],
+            [
+              "css=#user",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='user'])[1]",
+              "xpath:attributes"
+            ]
+          ],
+          "id": "2088c970-1e44-4600-be80-0e9c5c415941"
+        },
+        {
+          "command": "type",
+          "target": "id=email",
+          "value": "test@test.com",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "targets": [
+            [
+              "id=email",
+              "id"
+            ],
+            [
+              "css=#email",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='email'])[1]",
+              "xpath:attributes"
+            ]
+          ],
+          "id": "a8503e7f-1d84-4bf0-9527-7fd02edb777a"
+        },
+        {
+          "command": "type",
+          "target": "id=password",
+          "value": "12Mdp@",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "targets": [
+            [
+              "id=password",
+              "id"
+            ],
+            [
+              "css=#password",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='password'])[1]",
+              "xpath:attributes"
+            ]
+          ],
+          "id": "4d387ef5-4ec5-47ab-ba3a-085afaa7e8de"
+        },
+        {
+          "command": "type",
+          "target": "id=psw-confirmation",
+          "value": "12Mdp@",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "targets": [
+            [
+              "id=psw-confirmation",
+              "id"
+            ],
+            [
+              "css=#psw-confirmation",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='psw-confirmation'])[1]",
+              "xpath:attributes"
+            ]
+          ],
+          "id": "98ea59bc-5d09-4b35-9cc4-ac174841e8eb"
+        },
+        {
+          "command": "click",
+          "target": "css=button:nth-child(1)",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "targets": [
+            [
+              "css=button:nth-child(1)",
+              "css:finder"
+            ],
+            [
+              "xpath=(//button[@type='submit' and text()='Création du compte'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=//button[contains(.,'Création du compte')]",
+              "xpath:innerText"
+            ]
+          ],
+          "id": "d99fcc2e-f87d-4fac-9cd1-7c880c0e390b"
+        },
+        {
+          "command": "click",
+          "target": "id=email",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "targets": [
+            [
+              "id=email",
+              "id"
+            ],
+            [
+              "css=#email",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='email'])[1]",
+              "xpath:attributes"
+            ]
+          ],
+          "id": "e989a27d-d5ae-478b-806e-6583e1e3d956"
+        },
+        {
+          "command": "type",
+          "target": "id=email",
+          "value": "test@test.com",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "targets": [
+            [
+              "id=email",
+              "id"
+            ],
+            [
+              "css=#email",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='email'])[1]",
+              "xpath:attributes"
+            ]
+          ],
+          "id": "4a0739c1-7472-48da-98a4-d0ba5b80ec74"
+        },
+        {
+          "command": "type",
+          "target": "id=password",
+          "value": "12Mdp",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "targets": [
+            [
+              "id=password",
+              "id"
+            ],
+            [
+              "css=#password",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='password'])[1]",
+              "xpath:attributes"
+            ]
+          ],
+          "id": "e5b099bd-d4bc-4d29-a961-8e0827a81ebb"
+        },
+        {
+          "command": "click",
+          "target": "css=button:nth-child(1)",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "targets": [
+            [
+              "css=button:nth-child(1)",
+              "css:finder"
+            ],
+            [
+              "xpath=(//button[@type='submit' and text()='Se connecter'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=//button[contains(.,'Se connecter')]",
+              "xpath:innerText"
+            ]
+          ],
+          "id": "f08c69ba-67b2-45e4-b1c2-d94f8466afde"
+        },
+        {
+          "command": "waitForElementPresent",
+          "target": "xpath=/html/body/script",
+          "value": "Erreur, veuillez saisir les informations correctement",
+          "id": "ea1a6461-6735-4534-9bc6-c72f916a9699"
+        }
+      ]
+    },
+    {
+      "id": "f575f545-07ae-4b41-b18c-7179f825b19c",
+      "name": "test_display_profil",
+      "commands": [
+        {
+          "command": "open",
+          "target": "https://enijdenis.github.io/memory/index.html",
+          "value": "",
+          "id": "4467d755-2f7b-425c-9a5e-b474f68e8263"
+        },
+        {
+          "command": "click",
+          "target": "linkText=S'inscrire",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "targets": [
+            [
+              "linkText=S'inscrire",
+              "linkText"
+            ],
+            [
+              "css=li:nth-child(2) > a",
+              "css:finder"
+            ],
+            [
+              "xpath=(//a[contains(@href, 'formulaireInscrire.html')])[1]",
+              "xpath:href"
+            ]
+          ],
+          "id": "1c293514-cc2b-45fc-be8b-0c9dba45d5d7"
+        },
+        {
+          "command": "click",
+          "target": "id=user",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "targets": [
+            [
+              "id=user",
+              "id"
+            ],
+            [
+              "css=#user",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='user'])[1]",
+              "xpath:attributes"
+            ]
+          ],
+          "id": "965aec46-0f70-4e8f-ae15-f3b2de886654"
+        },
+        {
+          "command": "type",
+          "target": "id=user",
+          "value": "test",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "targets": [
+            [
+              "id=user",
+              "id"
+            ],
+            [
+              "css=#user",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='user'])[1]",
+              "xpath:attributes"
+            ]
+          ],
+          "id": "5295cb12-f8db-4770-b093-9e39d2c7c0e2"
+        },
+        {
+          "command": "storeValue",
+          "target": "id=user",
+          "value": "nomUtilisateur",
+          "id": "9d2bc55e-21e0-45e3-88f5-5ceaf16acf54"
+        },
+        {
+          "command": "type",
+          "target": "id=email",
+          "value": "test@test.com",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "targets": [
+            [
+              "id=email",
+              "id"
+            ],
+            [
+              "css=#email",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='email'])[1]",
+              "xpath:attributes"
+            ]
+          ],
+          "id": "d658327b-03d5-436d-a6ba-956d2c0497c9"
+        },
+        {
+          "command": "storeValue",
+          "target": "id=email",
+          "value": "email",
+          "id": "72624f49-1bf2-4c92-a82b-1f73ddc3eea4"
+        },
+        {
+          "command": "type",
+          "target": "id=password",
+          "value": "12Mdp@",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "targets": [
+            [
+              "id=password",
+              "id"
+            ],
+            [
+              "css=#password",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='password'])[1]",
+              "xpath:attributes"
+            ]
+          ],
+          "id": "c9e77aa6-6ed6-49d2-8908-269256175a05"
+        },
+        {
+          "command": "type",
+          "target": "id=psw-confirmation",
+          "value": "12Mdp@",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "targets": [
+            [
+              "id=psw-confirmation",
+              "id"
+            ],
+            [
+              "css=#psw-confirmation",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='psw-confirmation'])[1]",
+              "xpath:attributes"
+            ]
+          ],
+          "id": "1330d7bb-e668-4146-ba5f-08412e9ff09e"
+        },
+        {
+          "command": "click",
+          "target": "css=button:nth-child(1)",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "targets": [
+            [
+              "css=button:nth-child(1)",
+              "css:finder"
+            ],
+            [
+              "xpath=(//button[@type='submit' and text()='Création du compte'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=//button[contains(.,'Création du compte')]",
+              "xpath:innerText"
+            ]
+          ],
+          "id": "f34561b0-4f2e-4dc5-97c1-9f67cea91683"
+        },
+        {
+          "command": "click",
+          "target": "id=email",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "targets": [
+            [
+              "id=email",
+              "id"
+            ],
+            [
+              "css=#email",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='email'])[1]",
+              "xpath:attributes"
+            ]
+          ],
+          "id": "504f281c-556d-4128-ac79-60dd10c395b1"
+        },
+        {
+          "command": "type",
+          "target": "id=email",
+          "value": "test@test.com",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "targets": [
+            [
+              "id=email",
+              "id"
+            ],
+            [
+              "css=#email",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='email'])[1]",
+              "xpath:attributes"
+            ]
+          ],
+          "id": "8a94a902-b3fe-424c-9a50-d7b9882ae78d"
+        },
+        {
+          "command": "type",
+          "target": "id=password",
+          "value": "12Mdp@",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "targets": [
+            [
+              "id=password",
+              "id"
+            ],
+            [
+              "css=#password",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='password'])[1]",
+              "xpath:attributes"
+            ]
+          ],
+          "id": "8052d315-bf41-4e6c-a917-aba0518f0367"
+        },
+        {
+          "command": "click",
+          "target": "css=button:nth-child(1)",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "targets": [
+            [
+              "css=button:nth-child(1)",
+              "css:finder"
+            ],
+            [
+              "xpath=(//button[@type='submit' and text()='Se connecter'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=//button[contains(.,'Se connecter')]",
+              "xpath:innerText"
+            ]
+          ],
+          "id": "d79e4a85-90dd-48ef-89f3-2c01b6893d0c"
+        },
+        {
+          "command": "click",
+          "target": "linkText=Profil",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "49ff745a-b261-4c8f-87d8-9198b88d9e0e",
+          "targets": [
+            [
+              "linkText=Profil",
+              "linkText"
+            ],
+            [
+              "css=li:nth-child(4) > a",
+              "css:finder"
+            ],
+            [
+              "xpath=(//a[contains(text(),'Profil')])[1]",
+              "xpath:link"
+            ],
+            [
+              "xpath=(//a[contains(@href, 'profil.html')])[1]",
+              "xpath:href"
+            ],
+            [
+              "xpath=//a[contains(.,'Profil')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "assertValue",
+          "target": "id=user",
+          "value": "${nomUtilisateur}",
+          "id": "da8620f6-d7ed-465a-8b90-d92271b0d08d",
+          "fallbackTargets": [
+            [
+              "id=user",
+              "id"
+            ],
+            [
+              "css=#user",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='user'])[1]",
+              "xpath:attributes"
+            ]
+          ]
+        },
+        {
+          "command": "assertValue",
+          "target": "id=email",
+          "value": "${email}",
+          "id": "2b8a7179-8a2c-4ec4-9867-a4e67b17cbd1"
+        }
+      ]
+    }
+  ],
+  "snapshot": {
+    "dependencies": {},
+    "tests": [],
+    "jest": {
+      "extraGlobals": []
+    }
+  }
+}

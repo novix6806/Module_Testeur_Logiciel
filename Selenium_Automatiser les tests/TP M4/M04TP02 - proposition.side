@@ -1,0 +1,236 @@
+{
+  "id": "73e24b12-51ea-4f92-aede-a2f655a37e50",
+  "version": "2.0",
+  "name": "tp2",
+  "url": "https://enijdenis.github.io",
+  "tests": [{
+    "id": "7f4a8db4-4d43-4a3c-83b7-6910e0139d55",
+    "name": "inscription",
+    "commands": [{
+      "id": "df48e50a-f677-4b0c-b40a-f83db7acd216",
+      "comment": "",
+      "command": "open",
+      "target": "/memory/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "65e1ae6b-16ea-4d8b-b755-885f07881807",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1500x816",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0b321ba0-5f47-40fa-b601-165824f76672",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=S'inscrire",
+      "targets": [
+        ["linkText=S'inscrire", "linkText"],
+        ["css=li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(@href, 'formulaireInscrire.html')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a8e94eb2-3d88-4f2e-adac-b95aa1c58605",
+      "comment": "",
+      "command": "type",
+      "target": "id=user",
+      "targets": [
+        ["id=user", "id"],
+        ["css=#user", "css:finder"],
+        ["xpath=//input[@id='user']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "toto"
+    }, {
+      "id": "b75508d5-931b-4ad2-9690-6b7ff7f24484",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "toto@toto.com"
+    }, {
+      "id": "63bbd2b6-5cea-48f2-bc66-7311b1357dea",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": "1234m-"
+    }, {
+      "id": "574b0a30-93f8-4bf5-a6e9-1aee00cb5db6",
+      "comment": "",
+      "command": "type",
+      "target": "id=psw-confirmation",
+      "targets": [
+        ["id=psw-confirmation", "id"],
+        ["css=#psw-confirmation", "css:finder"],
+        ["xpath=//input[@id='psw-confirmation']", "xpath:attributes"],
+        ["xpath=//div[4]/div/input", "xpath:position"]
+      ],
+      "value": "1234m-"
+    }, {
+      "id": "ca0c03c0-cd78-400c-a721-aee1664fba41",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(1)",
+      "targets": [
+        ["css=button:nth-child(1)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Création du compte')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7bd731f0-5c3c-49b7-b893-e151ce31e68e",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "ENI-MEMORY-Connecter",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "36bfe407-5497-430f-a8c1-80e1fc6bc225",
+    "name": "inscription - annuler",
+    "commands": [{
+      "id": "a8e60308-4b62-40e2-8290-93642bed9b82",
+      "comment": "",
+      "command": "open",
+      "target": "/memory/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "178d33d0-56f8-436f-ad4b-486acbf4d9bb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1500x816",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f5756155-bb26-4792-926c-33d60afbbb3e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=S'inscrire",
+      "targets": [
+        ["linkText=S'inscrire", "linkText"],
+        ["css=li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(@href, 'formulaireInscrire.html')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0dafeec7-26f9-4c42-8ba6-aa21d8a552f9",
+      "comment": "",
+      "command": "type",
+      "target": "id=user",
+      "targets": [
+        ["id=user", "id"],
+        ["css=#user", "css:finder"],
+        ["xpath=//input[@id='user']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "toto"
+    }, {
+      "id": "bd6ed254-5522-44de-8f1b-04f64a0b6f0b",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "toto@toto.com"
+    }, {
+      "id": "aae8b516-2b5e-4cc3-88d4-70df096347a4",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": "1234m-"
+    }, {
+      "id": "e487abc6-61a2-4c8c-a9e6-e5ee1bd99a05",
+      "comment": "",
+      "command": "type",
+      "target": "id=psw-confirmation",
+      "targets": [
+        ["id=psw-confirmation", "id"],
+        ["css=#psw-confirmation", "css:finder"],
+        ["xpath=//input[@id='psw-confirmation']", "xpath:attributes"],
+        ["xpath=//div[4]/div/input", "xpath:position"]
+      ],
+      "value": "1234m-"
+    }, {
+      "id": "8301c97d-c1e6-4544-95f0-e7a1e2da19b5",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(2)",
+      "targets": [
+        ["css=button:nth-child(2)", "css:finder"],
+        ["xpath=//button[@type='reset']", "xpath:attributes"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Annuler')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f4772e5e-7f20-4966-b912-ebb4e0671fc7",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=user",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2a6974ca-a576-45a8-951c-ac666a6c318b",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=email",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "db4732d6-45a9-4cb4-9972-602dc44866ef",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=password",
+      "targets": [
+        ["css=.input-group:nth-child(3) > label", "css:finder"],
+        ["xpath=//div[3]/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Mot de passe')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ca50904-8142-4dfb-ac53-c3115e7607a8",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=psw-confirmation",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "d09d4e5e-2605-4879-bd8e-f37a73a0f92e",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["7f4a8db4-4d43-4a3c-83b7-6910e0139d55"]
+  }],
+  "urls": ["https://enijdenis.github.io/"],
+  "plugins": []
+}

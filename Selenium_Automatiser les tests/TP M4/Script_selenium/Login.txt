@@ -1,0 +1,561 @@
+Project:
+TP Module4
+/
+
+/
+
+/
+
+/
+
+Executing <#>
+
+  *
+    Login
+
+Runs: 1Failures: 1
+
+/
+
+/
+
+Command	Target	Value
+
+Commands, targets and Values
+
+Command Position	Command	Target	Value	More options
+
+1		open	/		
+2		set window size	2016x908		
+3		click	linkText=Selenium		
+4		click	linkText=Login		
+5		type	id=email	Test	
+6		type	id=passwd	Test	
+7		click	css=#SubmitLogin > span		
+					
+
+Command
+
+Target
+
+Value
+
+Test
+Description
+
+  * Log <#>
+  * Reference <#>
+*
+
+  *
+    Running 'Accessing link'
+    15:09:21
+
+  *
+    1.open on /OK
+    15:09:22
+
+  *
+    2.setWindowSize on 2016x908OK
+    15:09:22
+
+  *
+    3.click on linkText=SeleniumOK
+    15:09:22
+
+  *
+    4.click on linkText=Accessing LinkOK
+    15:09:22
+
+  *
+    5.click on linkText=click hereOK
+    15:09:22
+
+  *
+    6.Trying to find css=body > a:nth-child(4)...Failed:
+    15:09:23
+
+    Playback aborted
+  *
+    'Accessing link' was aborted
+    15:09:31
+
+  *
+    Running 'Accessing link'
+    15:11:58
+
+  *
+    1.open on /OK
+    15:11:58
+
+  *
+    2.setWindowSize on 2016x908OK
+    15:11:58
+
+  *
+    3.click on linkText=SeleniumUndetermined
+    15:11:58
+
+    Aborting...
+  *
+    'Accessing link' was aborted
+    15:12:11
+
+  *
+    Running 'Accessing link'
+    15:12:14
+
+  *
+    1.open on /OK
+    15:12:14
+
+  *
+    2.setWindowSize on 2016x908OK
+    15:12:14
+
+  *
+    3.click on linkText=SeleniumOK
+    15:12:14
+
+  *
+    4.click on linkText=Accessing LinkOK
+    15:12:14
+
+  *
+    5.storeWindowHandle on mainWindowsOK
+    15:12:15
+
+  *
+    6.click on linkText=click hereOK
+    15:12:15
+
+  *
+    7.selectWindow on handle=${mainWindows}OK
+    15:12:15
+
+  *
+    8.click on css=body > a:nth-child(4)Undetermined
+    15:12:15
+
+    Aborting...
+  *
+    'Accessing link' was aborted
+    15:12:35
+
+  *
+    Running 'Accessing link'
+    15:12:37
+
+  *
+    1.open on /OK
+    15:12:37
+
+  *
+    2.setWindowSize on 2016x908OK
+    15:12:37
+
+  *
+    3.click on linkText=SeleniumOK
+    15:12:37
+
+  *
+    4.click on linkText=Accessing LinkOK
+    15:12:38
+
+  *
+    5.storeWindowHandle on mainWindowsOK
+    15:12:38
+
+  *
+    6.click on linkText=click hereOK
+    15:12:38
+
+  *
+    7.selectWindow on handle=${mainWindows}OK
+    15:12:39
+
+  *
+    8.click on css=body > a:nth-child(4)Undetermined
+    15:12:39
+
+    Aborting...
+  *
+    'Accessing link' was aborted
+    15:45:34
+
+  *
+    Running 'Accessing link'
+    15:45:54
+
+  *
+    1.open on /OK
+    15:45:55
+
+  *
+    2.setWindowSize on 2016x908OK
+    15:45:55
+
+  *
+    3.click on linkText=SeleniumUndetermined
+    15:45:55
+
+    Aborting...
+  *
+    'Accessing link' was aborted
+    15:46:02
+
+  *
+    Running 'Accessing link'
+    15:46:04
+
+  *
+    1.open on /OK
+    15:46:04
+
+  *
+    2.setWindowSize on 2016x908OK
+    15:46:04
+
+  *
+    3.click on linkText=SeleniumUndetermined
+    15:46:04
+
+    Aborting...
+  *
+    'Accessing link' was aborted
+    15:46:24
+
+  *
+    Running 'Accessing link'
+    15:46:28
+
+  *
+    1.open on /OK
+    15:46:28
+
+  *
+    2.setWindowSize on 2016x908OK
+    15:46:28
+
+  *
+    3.click on linkText=SeleniumOK
+    15:46:28
+
+  *
+    4.click on linkText=Accessing LinkOK
+    15:46:29
+
+  *
+    5.storeWindowHandle on mainWindowOK
+    15:46:29
+
+  *
+    6.click on linkText=click hereOK
+    15:46:29
+
+  *
+    7.selectWindow on handle=${mainWindow}OK
+    15:46:29
+
+  *
+    8.Trying to find css=body > a:nth-child(4)...Failed:
+    15:46:29
+
+    Playback aborted
+  *
+    'Accessing link' was aborted
+    15:47:00
+
+  *
+    Running 'Accessing link'
+    15:53:20
+
+  *
+    1.open on /OK
+    15:53:20
+
+  *
+    2.setWindowSize on 2016x908OK
+    15:53:20
+
+  *
+    3.click on linkText=SeleniumUndetermined
+    15:53:20
+
+    Aborting...
+  *
+    'Accessing link' was aborted
+    15:53:26
+
+  *
+    Running 'Accessing link'
+    15:53:38
+
+  *
+    1.open on /OK
+    15:53:38
+
+  *
+    2.setWindowSize on 2016x908OK
+    15:53:38
+
+  *
+    3.click on linkText=SeleniumUndetermined
+    15:53:39
+
+    Aborting...
+  *
+    'Accessing link' was aborted
+    15:54:24
+
+  *
+    Running 'Accessing link'
+    15:54:26
+
+  *
+    1.open on /OK
+    15:54:26
+
+  *
+    2.setWindowSize on 2016x908OK
+    15:54:26
+
+  *
+    3.click on linkText=SeleniumOK
+    15:54:26
+
+  *
+    4.click on linkText=Accessing LinkOK
+    15:54:26
+
+  *
+    5.storeWindowHandle on mainWindowOK
+    15:54:27
+
+  *
+    6.click on linkText=click hereOK
+    15:54:27
+
+  *
+    7.selectWindow on handle=${mainWindow}OK
+    15:54:27
+
+  *
+    8.click on Xpath=/html/body/a[2]Failed:
+    15:54:27
+
+    Unsupported locator strategy: Xpath
+  *
+    'Accessing link' ended with 1 error(s)
+    15:54:28
+
+  *
+    Running 'Accessing link'
+    15:56:58
+
+  *
+    1.open on /OK
+    15:56:58
+
+  *
+    2.setWindowSize on 2016x908OK
+    15:56:58
+
+  *
+    3.click on linkText=SeleniumUndetermined
+    15:56:58
+
+    Aborting...
+  *
+    'Accessing link' was aborted
+    15:57:05
+
+  *
+    Running 'Accessing link'
+    15:57:07
+
+  *
+    1.open on /OK
+    15:57:07
+
+  *
+    2.setWindowSize on 2016x908OK
+    15:57:07
+
+  *
+    3.click on linkText=SeleniumUndetermined
+    15:57:07
+
+    Aborting...
+  *
+    'Accessing link' was aborted
+    15:57:15
+
+  *
+    Running 'Accessing link'
+    15:57:17
+
+  *
+    1.open on /OK
+    15:57:17
+
+  *
+    2.setWindowSize on 2016x908OK
+    15:57:17
+
+  *
+    3.click on linkText=SeleniumOK
+    15:57:17
+
+  *
+    4.click on linkText=Accessing LinkOK
+    15:57:17
+
+  *
+    5.click on linkText=click hereOK
+    15:57:18
+
+  *
+    6.go backFailed:
+    15:57:18
+
+    Unknown command go back
+  *
+    'Accessing link' ended with 1 error(s)
+    15:57:19
+
+  *
+    Running 'Accessing link'
+    15:59:31
+
+  *
+    1.open on /OK
+    15:59:31
+
+  *
+    2.setWindowSize on 2016x908OK
+    15:59:31
+
+  *
+    3.click on linkText=SeleniumOK
+    15:59:31
+
+  *
+    4.click on linkText=Accessing LinkOK
+    15:59:32
+
+  *
+    5.click on linkText=click hereOK
+    15:59:32
+
+  *
+    6.open on https://demo.guru99.com/test/link.html <https://
+    demo.guru99.com/test/link.html>OK
+    15:59:33
+
+  *
+    7.click on Xpath=/html/body/a[2]Failed:
+    15:59:33
+
+    Unsupported locator strategy: Xpath
+  *
+    'Accessing link' ended with 1 error(s)
+    15:59:33
+
+  *
+    Running 'Accessing link'
+    15:59:59
+
+  *
+    1.open on /OK
+    16:00:00
+
+  *
+    2.setWindowSize on 2016x908OK
+    16:00:00
+
+  *
+    3.click on linkText=SeleniumOK
+    16:00:00
+
+  *
+    4.click on linkText=Accessing LinkOK
+    16:00:00
+
+  *
+    5.click on linkText=click hereOK
+    16:00:00
+
+  *
+    6.open on https://demo.guru99.com/test/link.html <https://
+    demo.guru99.com/test/link.html>OK
+    16:00:01
+
+  *
+    7.click on xpath=/html/body/a[2]OK
+    16:00:01
+
+  *
+    'Accessing link' completed successfully
+    16:00:01
+
+  *
+    Running 'Login'
+    16:14:58
+
+  *
+    1.open on /OK
+    16:14:58
+
+  *
+    2.setWindowSize on 2016x908OK
+    16:14:58
+
+  *
+    3.click on linkText=SeleniumOK
+    16:14:58
+
+  *
+    4.click on linkText=LoginOK
+    16:14:59
+
+  *
+    5.type on id=email with value TestFailed:
+    16:14:59
+
+    n.createEvent(...).initKeyEvent is not a function
+  *
+    'Login' ended with 1 error(s)
+    16:15:00
+
+  *
+    Running 'Login'
+    16:16:24
+
+  *
+    1.open on /OK
+    16:16:24
+
+  *
+    2.setWindowSize on 2016x908OK
+    16:16:24
+
+  *
+    3.click on linkText=SeleniumOK
+    16:16:24
+
+  *
+    4.click on linkText=LoginOK
+    16:16:25
+
+  *
+    5.type on id=email with value TestFailed:
+    16:16:25
+
+    n.createEvent(...).initKeyEvent is not a function
+  *
+    'Login' ended with 1 error(s)
+    16:16:25
+
+Run current test Ctrl+R
+
