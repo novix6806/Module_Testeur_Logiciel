@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eni Tech Community</title>
+	<!-- Appel du CDN de Bootstrap --> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+	
+	<!-- https://webhint.io/docs/user-guide/hints/hint-apple-touch-icons/ -->
+    <link rel="apple-touch-icon" sizes="57x57" href="Assets/Images/icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="Assets/Images/icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="Assets/Images/icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="Assets/Images/icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="Assets/Images/icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="Assets/Images/icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="Assets/Images/icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="Assets/Images/icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Assets/Images/icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="Assets/Images/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Assets/Images/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="Assets/Images/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Assets/Images/icon/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<!-- https://getbootstrap.com/docs/5.0/utilities/colors/#colors -->
+<!-- https://getbootstrap.com/docs/5.0/layout/containers/#how-they-work -->
+<!-- https://getbootstrap.com/docs/5.0/utilities/spacing/#notation -->
+<body class="container-fluid mt-3 text-light">
+
+    <!--Première section : flex-->
+	<!-- https://getbootstrap.com/docs/4.0/utilities/flex/ -->
+	<!-- https://devstory.net/12023/bootstrap-flex -->
+	<!-- https://mdbootstrap.com/snippets/jquery/mdbootstrap/879600 -->
+	<!-- https://getbootstrap.com/docs/5.0/utilities/flex/#wrap -->
+    <section class="d-flex flex-row justify-content-between flex-wrap">
+
+		<!-- https://getbootstrap.com/docs/5.0/content/images/#responsive-images -->
+		<!-- https://getbootstrap.com/docs/5.0/utilities/display/#examples -->
+		<!-- https://getbootstrap.com/docs/5.1/utilities/opacity/ -->
+        <img src="Assets/Images/icon/apple-icon-152x152.png" alt="Logo de l'ENI" class="img-fluid opacity-50 d-none d-sm-block mb-4">
+
+		<!-- https://getbootstrap.com/docs/5.0/content/typography/#display-headings -->
+		<!-- https://getbootstrap.com/docs/5.0/utilities/flex/#align-self -->
+        <h1 class="font-monospace display-1 align-self-center">ENI <span class="text-success">Tech</span> Community</h1>
+
+        <nav class="nav d-flex flex-row align-items-start flex-nowrap">
+			<!-- https://getbootstrap.com/docs/5.0/components/modal/ -->
+            <a href="#" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#signin">Sign in</a>
+			<!-- https://getbootstrap.com/docs/5.0/getting-started/rtl/#approach -->
+			<a href="inscription.html" class="btn btn-success ms-3">Sign up</a>
+        </nav>
+    </section>
+
+    <br><br>
+
+    <!--Seconde section : grid Bootstrap-->
+    <main class="container mt-5">
+		<!-- https://getbootstrap.com/docs/5.0/utilities/flex/#justify-content -->
+        <div class="row justify-content-around">
+            <section class="col-md-4 col-12">
+                <img src="Assets/Images/laptop-g924e4b600_1280.png" alt="Image d'un laptop sur un bureau" class="img-fluid">
+            </section>
+            <section class="col-md-4 col-12 border-start mt-3">
+                <h2>Eni Tech Community</h2>
+                <h4>La première communauté tech de France !</h4>
+                <p>Des tonnes d'articles, de conseils et de bonnes pratiques pour vos projets web et applications mobiles. La communauté ENi regroupe plus d"un millier de professionnels experts dans divers domaines.</p>
+                <p>Rejoignez-nous immédiatement !</p>
+                <a href="inscription.html" class="btn btn-success">Sign up</a>
+            </section>
+        </div>
+
+        <br><br>
+
+        <!--Vidéo : redimensionnement et centrage du texte-->
+        <article class="row w-75 mx-auto m-5">
+            <h1 class="text-center">A la pointe des dernières technologies</h1>
+            <img src="Assets/Images/interface-g774623401_1280.png" alt="Image de smartphone et laptop" class="img-fluid img-thumbnail">
+            <p class="text-center mt-4">La technologie n'attend pas. Elle est en constante évolution et seul une veille permanente permet de rester à la page. Il n'est pas facile de suivre tout ce qui se passe. La communauté Technique ENI trie pour vous les informations importantes
+                et vous les partage au travers d'articles passionnants.</p>
+        </article>
+
+        <!--Card et grid-->
+        <section class="container">
+            <div class="row">
+                <div class="card col-12 col-md-5 bg-dark mb-3 shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">Toute la tech</h5>
+                        <img src="Assets/Images/mobile-devices-g26934f749_1280.png" class="card-img-top" alt="Image de laptop, tablette et smartphone">
+                        <p class="card-text">Les meilleurs conseils sur toute la tech. Application mobile, web, réseau et infrastructure.</p>
+                    </div>
+                </div>
+                <div class="card col-12 col-md-5 offset-md-2 bg-dark mb-3 shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">Le réseau</h5>
+                        <img src="Assets/Images/community-3175072_1920.png" class="card-img-top" alt="Image d'une communauté'">
+                        <p class="card-text">Un réseau de professionnels qui s'entraide. Recherche d'emploi, cooptation, recommandation, ...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!--Badge-->
+    <footer class="container w-100 mt-5 bg-dark p-3 text-center">
+        <button type="button" class="btn btn-outline-light position-relative text-center">Nouveaux articles aujourd'hui
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                99+
+                <span class="visually-hidden">Articles non lus</span>
+            </span>
+        </button>
+        <h5 class="mt-4">ENI <span class="text-success">Tech</span> Community</h5>
+        <p class="fw-light fst-italic">Powered by ENI Ecole Informatique</p>
+        <address>Rue Faraday 44800 Saint-Herblain</address>
+    </footer>
+
+
+    <!--Bouton fixe-->
+	<!-- https://getbootstrap.com/docs/5.0/layout/utilities/#margin-and-padding -->
+	<!-- https://getbootstrap.com/docs/5.0/helpers/position/#fixed-bottom -->
+	<!-- https://getbootstrap.com/docs/5.0/migration/#utilities -->
+	<!-- https://icons.getbootstrap.com/icons/arrow-up-square/ -->
+    <section class="text-end mb-3 me-3 fixed-bottom">
+        <a href="#top" class="link-secondary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="currentColor" class="bi bi-arrow-up-square" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.5 9.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+            </svg>
+        </a>
+    </section>
+
+
+    <!--Modale connexion-->
+    <div class="modal fade" id="signin" tabindex="-1" aria-labelledby="signin" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Connexion</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="post" class="was-validated">
+                        <div class="mb-3">
+                            <label for="login" class="form-label">Login : </label>
+                            <input type="text" id="login" placeholder="pseudo" class="form-control is-invalid" name="login" pattern="[a-zA-Z]{3,}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mdp" class="form-label">Mot de passe : </label>
+                            <input type="password" id="mdp" class="form-control is-invalid" name="mdp" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal" id="connexionToastBtn">Fermer</button>
+                    <input type="submit" class="btn btn-success" value="Connexion">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modale cookie-->
+    <!-- Modal -->
+    <div class="modal fade" id="staticModaleCookie" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-dark" id="staticBackdropLabel">Cookies</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-dark d-flex flex-column align-items-center">
+                    <img src="Assets/Images/gingerbread-162141_640.png" alt="Image d'un cookie" class="img-fluid w-25">
+                    <p class="mt-5">Afin d'améliorer votre expérience de navigation, ce site utilise des cookies.</p>
+                    <p class="fw-bold">Acceptez-vous ?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Je refuse</button>
+                    <button type="button" class="btn btn-primary">J'accepte</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Toast-->
+    <div class="position-fixed bottom-0 end-1 p-3" style="z-index: 11">
+        <div id="connexionToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <img src="Assets/Images/icon/favicon-16x16.png" class="rounded me-2" alt="icone avec logo de l'ENI">
+                <strong class="me-auto">Connexion annulée</strong>
+                <small>A l'instant</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body text-dark">
+                Tentative de connexion annulée !
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

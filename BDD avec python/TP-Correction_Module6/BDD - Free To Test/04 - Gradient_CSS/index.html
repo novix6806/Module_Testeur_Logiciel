@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dégradé</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Dégradé</h1>
+    </header>
+
+    <main>
+        <fieldset>
+            <legend>Critères</legend>
+            <div>
+                <input type="radio" name="typeGradient" id="linear" value="linear" checked><label for="linear"> Dégradé linéaire</label>
+            </div>
+            <div>
+                <input type="radio" name="typeGradient" id="radial" value="radial"><label for="radial"> Dégradé radial</label>
+            </div>
+            <div>
+                <input type="color" name="color1" id="color1"><label for="color1"> Couleur 1</label>
+            </div>
+            <div>
+                <input type="color" name="color2" id="color2"><label for="color2"> Couleur 2</label>
+            </div>
+            <div id="inputAngle">
+                <label for="angle">Angle : </label><input type="number" id="angle" name="angle" max="360" value="0"> degrés
+            </div>
+            <button id="createGradient">Créer le dégradé</button>
+        </fieldset>
+
+        <section id="gradient"></section>
+
+        <section id="codeCSS"></section>
+
+        <script src="script.js"></script>
+    </main>
+</body>
+</html>

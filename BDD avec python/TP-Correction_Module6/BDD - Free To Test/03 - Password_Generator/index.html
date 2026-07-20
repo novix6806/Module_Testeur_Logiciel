@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de mot de passe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Générateur de mot de passe</h1>
+        <img src="assets/images/lock.png" alt="Image de cadenas">
+    </header>
+    <main>
+        
+        <fieldset>
+            <legend>Critères du mot de passe</legend>
+
+            <div>
+                <label for="nb">Nombre de caractères :</label>
+                <input type="number" name="nb" id="nb" min="0" max="50" value="1">
+            </div>
+            <div>
+                <input type="checkbox" name="min" id="min"><label for="min">Minuscules</label>
+            </div>
+            <div>
+                <input type="checkbox" name="maj" id="maj"><label for="maj">Majuscules</label>
+            </div>
+            <div>
+                <input type="checkbox" name="num" id="num"><label for="num">Caractères numériques</label>
+            </div>
+            <div>
+                <input type="checkbox" name="car" id="car"><label for="car">Caractères spéciaux</label>
+            </div>
+            
+        </fieldset>
+
+        <fieldset>
+            <legend>Indicateur de sécurité</legend>
+            <span id="indicateur">
+                <canvas id="canvas" width="500px" height="50px"></canvas>
+            </span>
+        </fieldset>
+
+        <button id="generation">Générer</button>
+
+        <section id="mdp">
+            Le mot de passe généré apparaitra ici...
+        </section>
+        <button id="copy"><img src="assets/images/copy.png" alt="Copier" title="Copier le code"> Copier le code</button>
+
+    </main>
+    <script src="canvas.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
