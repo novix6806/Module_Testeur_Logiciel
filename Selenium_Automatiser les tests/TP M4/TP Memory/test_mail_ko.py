@@ -26,8 +26,8 @@ class TestTestmailko():
     self.driver.find_element(By.ID, "user").click()
     self.driver.find_element(By.ID, "user").send_keys("test")
     self.driver.find_element(By.ID, "email").send_keys("test@test")
-    self.driver.find_element(By.ID, "password").send_keys("Lagun@6806")
-    self.driver.find_element(By.ID, "psw-confirmation").send_keys("Lagun@6806")
+    self.driver.find_element(By.ID, "password").send_keys("12mdp@")
+    self.driver.find_element(By.ID, "psw-confirmation").send_keys("12mdp@")
     self.driver.find_element(By.CSS_SELECTOR, "button:nth-child(1)").click()
     assert self.driver.find_element(By.CSS_SELECTOR, ".input-group:nth-child(2) > .error-msg").text == "Rentrez un email valide."
     WebDriverWait(self.driver, 2).until(expected_conditions.presence_of_element_located((By.CSS_SELECTOR, ".shake")))
