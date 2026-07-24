@@ -1,0 +1,72 @@
+
+Vocabulaire de l'agilité 
+et de la méthode agile SCRUM
+
+tâches => gestion de projet = organisation du travail - qui fait quoi ?
+Product backlog => liste des US (fonctionnel et tâches) qui décrivent le produit et priorisé
+(Product Owner)
+
+Epic => thème / dossier
+US User Stories : En tant que ... je veux que ... afin de
+tâche
+bug=anomalie
+
+XRay
+Test Plan => campagne de test
+Test Set=> Suite de test => paquet de test
+Test=> manuel 
+       cucumber (gerkin - given when then) 
+	   générique=> exploratoire / tests fait à l'exterieur de XRay
+Test execution => executer les tests => OK ou KO 
+	=> ticket Bug 
+
+smoke test => tests fumée : tests critiques 
+
+test de régression / TR => 
+
+Différence entre US et fonctionnalité ?
+
+Cahier des charges : 
+ - exigence (requirement) fonctionnelle = fonctionnalité
+ - exigence non fonctionnelle  / contraintes
+    => respecter telle législation (RGPD)
+	=> temps de réponse 
+	=> sécurité
+	=> ergonomie
+	=> accessibilité
+			
+
+Fonctionnalité /  / service : expression du besoin
+=> scénarios
+
+Fonctionnalité Se connecter
+=> 3 scénarios 
+le scénario nominal : l'utilisateur saisit le bon login et le bon mot de passe, résultat : j'accède à ...
+scénario alternatif : l'utilisateur saisit un login inconnu, résultat : l'utilisateur n'accède pas ...
+scénario alternatif : l'utilisateur saisit un login connu et saisit un mauvais mot de passe, 
+
+test manuel : étapes à suivre - pour chaque étape : action / données / résultat attendu
+<> test exploratoire (intuition)
+test end to end  => test plusieurs fonctionnalité
+
+tests en boite noire / tests en boite blanche : tests unitaires (TU) et tests d'intégration 
+
+couches applicatives : 
+ihm / métier / accès aux données
+
+projet logiciel : 
+ - Analyse du besoin : on discute avec le client pour établir un cahier des charges
+ - Conception : définir l'architecture du produit logiciel
+ - Développement
+ - Tests systèmes (ou recette interne) => vérifie que l'application développée est conforme au cdc
+ => test fonctionnel / test en boite noire
+ - Déploiement
+ - Recette (test fait par le client) => test d'acceptation / test fonctionnel / test en boite noire
+ - Tests d'intégration système  
+
+
+environnements : 
+dev / recette / production
+
+configurations (systèmes (windows/linux..), logiciels utilisés , versions...)
+
