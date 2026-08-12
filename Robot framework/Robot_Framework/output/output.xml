@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.12.0 on win32)" generated="2026-08-05T11:56:50.540365" rpa="false" schemaversion="5">
+<suite id="s1" name="Premier" source="C:\Users\User\Desktop\Robot_Framework\premier.robot">
+<kw name="Log To Console" owner="BuiltIn" type="SETUP">
+<arg>Dans Suite Setup</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-05T11:56:50.839623" elapsed="0.000000"/>
+</kw>
+<test id="s1-t1" name="Premier test" line="20">
+<kw name="Log To Console" owner="BuiltIn" type="SETUP">
+<arg>Dans Test Setup</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-05T11:56:50.840624" elapsed="0.001500"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-08-05T11:56:50.842625" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<arg>https://www.google.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-08-05T11:56:50.842625" elapsed="1.024586"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-08-05T11:56:56.867907" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-08-05T11:56:51.867211" elapsed="5.000696"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-08-05T11:56:56.868912" level="INFO">${message} = Premier message avec robot Framework</msg>
+<var>${message}</var>
+<arg>Premier message avec robot Framework</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.868414" elapsed="0.000498"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${message}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.868912" elapsed="0.000499"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn" type="TEARDOWN">
+<arg>Dans Test Teardown</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.869913" elapsed="0.000000"/>
+</kw>
+<doc>Ce test ouvre le navigateur et affiche un message dans la console</doc>
+<tag>demonstration</tag>
+<tag>premier</tag>
+<timeout value="1 minute"/>
+<status status="PASS" start="2026-08-05T11:56:50.840125" elapsed="6.029788"/>
+</test>
+<test id="s1-t2" name="Deuxieme Test" line="29">
+<kw name="Log To Console" owner="BuiltIn" type="SETUP">
+<arg>Dans Test Setup</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.870912" elapsed="0.000500"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${variable}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.871412" elapsed="0.000501"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${list}[0]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.871913" elapsed="0.000499"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${list}[1]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.872412" elapsed="0.000502"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${dictionary.key1}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.872914" elapsed="0.000998"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${dictionary.example}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.873912" elapsed="0.000501"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn" type="TEARDOWN">
+<arg>Dans Test Teardown</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.874912" elapsed="0.000000"/>
+</kw>
+<doc>Ce test affiche la valeur d'une variable dans la console</doc>
+<tag>autretag</tag>
+<tag>demonstration</tag>
+<tag>deuxieme</tag>
+<timeout value="1 minute"/>
+<status status="PASS" start="2026-08-05T11:56:56.870412" elapsed="0.004500"/>
+</test>
+<test id="s1-t3" name="Troisieme Test" line="40">
+<kw name="Log To Console" owner="BuiltIn" type="SETUP">
+<arg>Dans Test Setup</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.875918" elapsed="0.000000"/>
+</kw>
+<kw name="Log Custom" owner="keywords">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Dans le keyword custom</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.876416" elapsed="0.000504"/>
+</kw>
+<doc>Ce keyword affiche un message dans la console</doc>
+<status status="PASS" start="2026-08-05T11:56:56.876416" elapsed="0.000504"/>
+</kw>
+<kw name="Addition" owner="keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-08-05T11:56:56.877916" level="INFO">${result} = 15</msg>
+<var>${result}</var>
+<arg>${a} + ${b}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.877417" elapsed="0.000499"/>
+</kw>
+<return>
+<value>${result}</value>
+<status status="PASS" start="2026-08-05T11:56:56.877916" elapsed="0.000000"/>
+</return>
+<msg time="2026-08-05T11:56:56.877916" level="INFO">${result} = 15</msg>
+<var>${result}</var>
+<arg>5</arg>
+<arg>10</arg>
+<doc>Ce keyword effectue une addition</doc>
+<status status="PASS" start="2026-08-05T11:56:56.876920" elapsed="0.000996"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Le résultat de l'addition est : ${result}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.878416" elapsed="0.000500"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn" type="TEARDOWN">
+<arg>Dans Test Teardown</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.878916" elapsed="0.000000"/>
+</kw>
+<doc>Ce test appelle un keyword custom et affiche un message dans la console</doc>
+<tag>demonstration</tag>
+<tag>troisieme</tag>
+<timeout value="1 minute"/>
+<status status="PASS" start="2026-08-05T11:56:56.875416" elapsed="0.004000"/>
+</test>
+<test id="s1-t4" name="Quatrieme Test" line="48">
+<kw name="Log To Console" owner="BuiltIn" type="SETUP">
+<arg>Dans Test Setup</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.879918" elapsed="0.000000"/>
+</kw>
+<kw name="Addition et Log" owner="keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-08-05T11:56:56.880918" level="INFO">${result} = 10</msg>
+<var>${result}</var>
+<arg>${a} + ${b}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.880416" elapsed="0.000502"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Le résultat de l'addition est : ${result}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.880918" elapsed="0.000498"/>
+</kw>
+<arg>7</arg>
+<arg>3</arg>
+<doc>Ce keyword effectue une addition et affiche le résultat dans la console</doc>
+<status status="PASS" start="2026-08-05T11:56:56.880416" elapsed="0.001000"/>
+</kw>
+<kw name="Addition et Log" owner="keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-08-05T11:56:56.882419" level="INFO">${result} = 10</msg>
+<var>${result}</var>
+<arg>${a} + ${b}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.881918" elapsed="0.000501"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Le résultat de l'addition est : ${result}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.882419" elapsed="0.000000"/>
+</kw>
+<arg>4</arg>
+<arg>6</arg>
+<doc>Ce keyword effectue une addition et affiche le résultat dans la console</doc>
+<status status="PASS" start="2026-08-05T11:56:56.881416" elapsed="0.001003"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn" type="TEARDOWN">
+<arg>Dans Test Teardown</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.882918" elapsed="0.000000"/>
+</kw>
+<tag>demonstration</tag>
+<tag>quatrieme</tag>
+<status status="PASS" start="2026-08-05T11:56:56.879416" elapsed="0.004003"/>
+</test>
+<test id="s1-t5" name="Condition" line="54">
+<kw name="Log To Console" owner="BuiltIn" type="SETUP">
+<arg>Dans Test Setup</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.883920" elapsed="0.000497"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-08-05T11:56:56.884417" level="INFO">${temperature} = 150</msg>
+<var>${temperature}</var>
+<arg>150</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.884417" elapsed="0.000500"/>
+</kw>
+<if>
+<branch type="IF" condition="${temperature} &lt; 0">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Il neige actuellement</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-08-05T11:56:56.884917" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-08-05T11:56:56.884917" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="${temperature} &gt; 100">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>L'eau s'évapore</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.884917" elapsed="0.000501"/>
+</kw>
+<status status="PASS" start="2026-08-05T11:56:56.884917" elapsed="0.000501"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Il ne neige pas actuellement</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-08-05T11:56:56.885418" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-08-05T11:56:56.885418" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2026-08-05T11:56:56.884917" elapsed="0.000501"/>
+</if>
+<kw name="Log To Console" owner="BuiltIn" type="TEARDOWN">
+<arg>Dans Test Teardown</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.885916" elapsed="0.000000"/>
+</kw>
+<tag>demonstration</tag>
+<status status="PASS" start="2026-08-05T11:56:56.883920" elapsed="0.001996"/>
+</test>
+<test id="s1-t6" name="Loop" line="64">
+<kw name="Log To Console" owner="BuiltIn" type="SETUP">
+<arg>Dans Test Setup</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.886416" elapsed="0.000501"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2026-08-05T11:56:56.887417" level="INFO">@{europe} = [ France | Allemagne | Italie | Espagne ]</msg>
+<var>@{europe}</var>
+<arg>France</arg>
+<arg>Allemagne</arg>
+<arg>Italie</arg>
+<arg>Espagne</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.886917" elapsed="0.000500"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${pays}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.887417" elapsed="0.000500"/>
+</kw>
+<var name="${pays}">France</var>
+<status status="PASS" start="2026-08-05T11:56:56.887417" elapsed="0.000500"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${pays}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.887917" elapsed="0.000000"/>
+</kw>
+<var name="${pays}">Allemagne</var>
+<status status="PASS" start="2026-08-05T11:56:56.887917" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${pays}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.888418" elapsed="0.000000"/>
+</kw>
+<var name="${pays}">Italie</var>
+<status status="PASS" start="2026-08-05T11:56:56.888418" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${pays}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.888917" elapsed="0.000000"/>
+</kw>
+<var name="${pays}">Espagne</var>
+<status status="PASS" start="2026-08-05T11:56:56.888917" elapsed="0.000000"/>
+</iter>
+<var>${pays}</var>
+<value>@{europe}</value>
+<status status="PASS" start="2026-08-05T11:56:56.887417" elapsed="0.001500"/>
+</for>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.889417" elapsed="0.000000"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2026-08-05T11:56:56.889417" elapsed="0.000500"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.889917" elapsed="0.000000"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2026-08-05T11:56:56.889917" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.889917" elapsed="0.001006"/>
+</kw>
+<var name="${i}">3</var>
+<status status="PASS" start="2026-08-05T11:56:56.889917" elapsed="0.001006"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.890923" elapsed="0.000000"/>
+</kw>
+<var name="${i}">4</var>
+<status status="PASS" start="2026-08-05T11:56:56.890923" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.891430" elapsed="0.000000"/>
+</kw>
+<var name="${i}">5</var>
+<status status="PASS" start="2026-08-05T11:56:56.891430" elapsed="0.000000"/>
+</iter>
+<var>${i}</var>
+<value>1</value>
+<value>6</value>
+<status status="PASS" start="2026-08-05T11:56:56.888917" elapsed="0.002513"/>
+</for>
+<kw name="Log To Console" owner="BuiltIn" type="TEARDOWN">
+<arg>Dans Test Teardown</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.891929" elapsed="0.000000"/>
+</kw>
+<tag>demonstration</tag>
+<status status="PASS" start="2026-08-05T11:56:56.886416" elapsed="0.006013"/>
+</test>
+<kw name="Log To Console" owner="BuiltIn" type="TEARDOWN">
+<arg>Dans Suite Teardown</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-05T11:56:56.892930" elapsed="0.000000"/>
+</kw>
+<doc>A simple test suite to demonstrate Robot Framework</doc>
+<status status="PASS" start="2026-08-05T11:56:50.541361" elapsed="6.351569"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">autretag</stat>
+<stat pass="6" fail="0" skip="0">demonstration</stat>
+<stat pass="1" fail="0" skip="0">deuxieme</stat>
+<stat pass="1" fail="0" skip="0">premier</stat>
+<stat pass="1" fail="0" skip="0">quatrieme</stat>
+<stat pass="1" fail="0" skip="0">troisieme</stat>
+</tag>
+<suite>
+<stat name="Premier" id="s1" pass="6" fail="0" skip="0">Premier</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-08-05T11:56:50.564876" level="WARN">Error in file 'C:\Users\User\Desktop\Robot_Framework\resources\keywords.resource' on line 10: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>

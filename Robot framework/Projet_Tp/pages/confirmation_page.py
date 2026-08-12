@@ -1,0 +1,1 @@
+CONFIRMATION_TEXT_LOCATOR = "id=fluentform_3_success"

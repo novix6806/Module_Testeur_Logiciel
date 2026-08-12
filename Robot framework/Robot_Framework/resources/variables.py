@@ -1,0 +1,1 @@
+example= "Ceci est une variable python importée dans mon test"

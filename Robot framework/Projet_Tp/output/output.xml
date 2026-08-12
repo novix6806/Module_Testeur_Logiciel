@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.5 on win32)" generated="2026-08-06T15:31:07.411341" rpa="false" schemaversion="5">
+<suite id="s1" name="Swaglabs" source="D:\TDLA\Cours\Doc Word\Robot framework\Projet_Tp\swaglabs.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2026-08-06T15:31:07.773839" level="INFO">Opening browser 'firefox' to base url 'https://saucedemo.com'.</msg>
+<arg>${base_url}</arg>
+<arg>browser=firefox</arg>
+<arg>alias=default</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-08-06T15:31:07.773570" elapsed="6.116894"/>
+</kw>
+<test id="s1-t1" name="Test Connexion" line="16">
+<kw name="No Operation" owner="BuiltIn" type="SETUP">
+<doc>Does absolutely nothing.</doc>
+<status status="PASS" start="2026-08-06T15:31:13.891226" elapsed="0.000319"/>
+</kw>
+<kw name="User Logged In">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-06T15:31:13.892598" level="INFO">Typing text 'standard_user' into text field 'user-name'.</msg>
+<arg>user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-06T15:31:13.892227" elapsed="0.077138"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2026-08-06T15:31:13.970012" level="INFO">Typing password into text field 'password'.</msg>
+<msg time="2026-08-06T15:31:13.999333" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-06T15:31:13.969636" elapsed="0.064719"/>
+</kw>
+<kw name="Submit Form" owner="SeleniumLibrary">
+<msg time="2026-08-06T15:31:14.034703" level="INFO">Submitting form 'None'.</msg>
+<doc>Submits a form identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-06T15:31:14.034582" elapsed="0.149108"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-08-06T15:31:14.216922" level="INFO">Current page contains text 'Products'.</msg>
+<arg>Products</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-08-06T15:31:14.183865" elapsed="0.033191"/>
+</kw>
+<doc>Authenticates an user on the website</doc>
+<status status="PASS" start="2026-08-06T15:31:13.891926" elapsed="0.325247"/>
+</kw>
+<kw name="Reset App" type="TEARDOWN">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-08-06T15:31:14.218034" level="INFO">Clicking button 'react-burger-menu-btn'.</msg>
+<arg>react-burger-menu-btn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-06T15:31:14.217834" elapsed="0.106683"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2026-08-06T15:31:14.324923" level="INFO">Clicking link 'Reset App State'.</msg>
+<arg>Reset App State</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-06T15:31:14.324708" elapsed="0.059006"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2026-08-06T15:31:14.384135" level="INFO">Clicking link 'Logout'.</msg>
+<arg>Logout</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-06T15:31:14.383894" elapsed="0.065432"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-08-06T15:31:14.456073" level="INFO">Element 'login-button' is displayed.</msg>
+<arg>login-button</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-06T15:31:14.449514" elapsed="0.006637"/>
+</kw>
+<doc>Resets web app state, and logs out</doc>
+<status status="PASS" start="2026-08-06T15:31:14.217592" elapsed="0.238649"/>
+</kw>
+<status status="PASS" start="2026-08-06T15:31:13.890701" elapsed="0.565692"/>
+</test>
+<test id="s1-t2" name="Test Listing Produits" line="20">
+<kw name="User Logged In" type="SETUP">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-06T15:31:14.457634" level="INFO">Typing text 'standard_user' into text field 'user-name'.</msg>
+<arg>user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-06T15:31:14.457433" elapsed="0.014157"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2026-08-06T15:31:14.472043" level="INFO">Typing password into text field 'password'.</msg>
+<msg time="2026-08-06T15:31:14.476979" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-06T15:31:14.471778" elapsed="0.021211"/>
+</kw>
+<kw name="Submit Form" owner="SeleniumLibrary">
+<msg time="2026-08-06T15:31:14.493330" level="INFO">Submitting form 'None'.</msg>
+<doc>Submits a form identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-06T15:31:14.493196" elapsed="0.015286"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-08-06T15:31:14.516275" level="INFO">Current page contains text 'Products'.</msg>
+<arg>Products</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-08-06T15:31:14.508729" elapsed="0.007643"/>
+</kw>
+<doc>Authenticates an user on the website</doc>
+<status status="PASS" start="2026-08-06T15:31:14.457245" elapsed="0.059221"/>
+</kw>
+<kw name="Product Should Have Price">
+<kw name="No Operation" owner="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="PASS" start="2026-08-06T15:31:14.517040" elapsed="0.000181"/>
+</kw>
+<arg>Sauce Labs Banana pack</arg>
+<arg>29.99</arg>
+<doc>Checks if the given product name is on the webpage, and that it has the given price</doc>
+<status status="PASS" start="2026-08-06T15:31:14.516796" elapsed="0.000471"/>
+</kw>
+<kw name="Product Should Have Price">
+<kw name="No Operation" owner="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="PASS" start="2026-08-06T15:31:14.517661" elapsed="0.000190"/>
+</kw>
+<arg>Sauce Labs Bike Light</arg>
+<arg>9.99</arg>
+<doc>Checks if the given product name is on the webpage, and that it has the given price</doc>
+<status status="PASS" start="2026-08-06T15:31:14.517483" elapsed="0.000418"/>
+</kw>
+<kw name="Product Should Have Price">
+<kw name="No Operation" owner="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="PASS" start="2026-08-06T15:31:14.518253" elapsed="0.000138"/>
+</kw>
+<arg>Sauce Labs Bolt T-Shirt</arg>
+<arg>15.99</arg>
+<doc>Checks if the given product name is on the webpage, and that it has the given price</doc>
+<status status="PASS" start="2026-08-06T15:31:14.518079" elapsed="0.000357"/>
+</kw>
+<kw name="Reset App" type="TEARDOWN">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-08-06T15:31:14.518996" level="INFO">Clicking button 'react-burger-menu-btn'.</msg>
+<arg>react-burger-menu-btn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-06T15:31:14.518843" elapsed="0.061736"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2026-08-06T15:31:14.581062" level="INFO">Clicking link 'Reset App State'.</msg>
+<arg>Reset App State</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-06T15:31:14.580816" elapsed="0.080649"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2026-08-06T15:31:14.661894" level="INFO">Clicking link 'Logout'.</msg>
+<arg>Logout</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-06T15:31:14.661660" elapsed="0.062204"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-08-06T15:31:14.731260" level="INFO">Element 'login-button' is displayed.</msg>
+<arg>login-button</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-06T15:31:14.724047" elapsed="0.007293"/>
+</kw>
+<doc>Resets web app state, and logs out</doc>
+<status status="PASS" start="2026-08-06T15:31:14.518681" elapsed="0.212766"/>
+</kw>
+<doc>Vérifie que la page de produits contient bien les produits souhaités</doc>
+<status status="PASS" start="2026-08-06T15:31:14.456862" elapsed="0.274743"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-08-06T15:31:14.732337" elapsed="2.660102"/>
+</kw>
+<status status="PASS" start="2026-08-06T15:31:07.413661" elapsed="9.978925"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Swaglabs" id="s1" pass="2" fail="0" skip="0">Swaglabs</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

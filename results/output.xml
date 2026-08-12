@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.12.0 on win32)" generated="2026-08-05T18:36:23.246582" rpa="false" schemaversion="5">
+<suite id="s1" name="Doc Word" source="D:\TDLA\Cours\Doc Word">
+<suite id="s1-s1" name="Robot framework" source="D:\TDLA\Cours\Doc Word\Robot framework">
+<suite id="s1-s1-s1" name="Projet Tp" source="D:\TDLA\Cours\Doc Word\Robot framework\Projet_Tp">
+<suite id="s1-s1-s1-s1" name="Recorded Test" source="D:\TDLA\Cours\Doc Word\Robot framework\Projet_Tp\recorded_test.robot">
+<test id="s1-s1-s1-s1-t1" name="Recorded Test" line="6">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-08-05T18:36:23.588872" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\TDLA\\Cours\\Doc Word\\results\\browser\\traces\\temp\\793a42f6-ea93-4ca3-bda6-41e84523171c"}</msg>
+<msg time="2026-08-05T18:36:23.616654" level="INFO">Starting Browser process D:\TDLA\Cours\Doc Word\Selenium_Automatiser les tests\TP M4\Script_selenium\.venv\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:52179</msg>
+<msg time="2026-08-05T18:36:24.828912" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\TDLA\\Cours\\Doc Word\\results\\browser\\traces\\temp\\793a42f6-ea93-4ca3-bda6-41e84523171c"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-08-05T18:36:23.587361" elapsed="1.242059"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-08-05T18:36:25.997917" level="INFO">Successfully initialized new page object and opened url: https://fluentforms.com/forms/contact-form-demo/</msg>
+<msg time="2026-08-05T18:36:25.998425" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://fluentforms.com/forms/contact-form-demo/</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-08-05T18:36:24.830425" elapsed="1.168000"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-08-05T18:36:25.999935" level="INFO">Clicks the element 'role=textbox[name='First Name']'.</msg>
+<arg>role=textbox[name='First Name']</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-08-05T18:36:25.999429" elapsed="0.062721"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-08-05T18:36:26.063207" level="INFO">Fills the text 'tets' in the given field.</msg>
+<arg>role=textbox[name='First Name']</arg>
+<arg>tets</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-08-05T18:36:26.062150" elapsed="0.012126"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-08-05T18:36:26.075787" level="INFO">Fills the text 'user' in the given field.</msg>
+<arg>role=textbox[name='* Last Name']</arg>
+<arg>user</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-08-05T18:36:26.074276" elapsed="0.108560"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-08-05T18:36:26.184362" level="INFO">Fills the text 'user@example.com' in the given field.</msg>
+<arg>role=textbox[name='Email Address']</arg>
+<arg>user@example.com</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-08-05T18:36:26.182836" elapsed="0.034024"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-08-05T18:36:26.218371" level="INFO">Fills the text 'test recorder playwright' in the given field.</msg>
+<arg>role=textbox[name='Subject']</arg>
+<arg>test recorder playwright</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-08-05T18:36:26.216860" elapsed="0.046233"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-08-05T18:36:26.264600" level="INFO">Fills the text 'enregistrer avec playwright' in the given field.</msg>
+<arg>role=textbox[name='Your Message']</arg>
+<arg>enregistrer avec playwright</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-08-05T18:36:26.263601" elapsed="0.013583"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-08-05T18:36:26.278191" level="INFO">Clicks the element 'role=button[name='Send Message']'.</msg>
+<arg>role=button[name='Send Message']</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-08-05T18:36:26.277184" elapsed="0.081774"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2026-08-05T18:36:28.231617" level="INFO">Text: ['Thank you for your message. We will get in touch with you shortly']</msg>
+<arg>id=fluentform_3_success</arg>
+<arg>==</arg>
+<arg>Thank you for your message. We will get in touch with you shortly</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2026-08-05T18:36:26.359463" elapsed="1.872154"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2026-08-05T18:36:28.448772" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-08-05T18:36:28.232123" elapsed="0.217655"/>
+</kw>
+<status status="PASS" start="2026-08-05T18:36:23.583337" elapsed="4.866947"/>
+</test>
+<status status="PASS" start="2026-08-05T18:36:23.334642" elapsed="5.131765"/>
+</suite>
+<status status="PASS" start="2026-08-05T18:36:23.288808" elapsed="5.194729"/>
+</suite>
+<status status="PASS" start="2026-08-05T18:36:23.284280" elapsed="5.224362"/>
+</suite>
+<status status="PASS" start="2026-08-05T18:36:23.252624" elapsed="5.266627"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Doc Word" id="s1" pass="1" fail="0" skip="0">Doc Word</stat>
+<stat name="Robot framework" id="s1-s1" pass="1" fail="0" skip="0">Doc Word.Robot framework</stat>
+<stat name="Projet Tp" id="s1-s1-s1" pass="1" fail="0" skip="0">Doc Word.Robot framework.Projet Tp</stat>
+<stat name="Recorded Test" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">Doc Word.Robot framework.Projet Tp.Recorded Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

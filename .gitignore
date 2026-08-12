@@ -1,0 +1,18 @@
+# Environnement virtuel Python
+.venv/
+venv/
+env/
+
+# Dépendances JavaScript
+node_modules/
+
+# Navigateurs téléchargés par Playwright
+.playwright/
+
+# Fichiers Python temporaires
+__pycache__/
+*.py[cod]
+
+# Fichiers générés
+.pytest_cache/
+.coverage

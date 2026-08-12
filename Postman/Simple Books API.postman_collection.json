@@ -1,0 +1,377 @@
+{
+  "info": {
+    "_postman_id": "5555fe0f-3645-42ca-94c4-37648b1d30dd",
+    "name": "Simple Books API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "42388519",
+    "_collection_link": "https://go.postman.co/collection/42388519-5555fe0f-3645-42ca-94c4-37648b1d30dd?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "00_Initialisation Variables",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              "// Preèrequest : Exécutio du script avant la transmission de la requête\r",
+              "console.log(\"Variable de Collection avant\");\r",
+              "console.log(\"🔪 Initialisation des variables de collection...\"); //Récupération dynamique de l'url.\r",
+              "\r",
+              "\r",
+              "console.log(pm.collectionVariables.toObject()); \r",
+              "\r",
+              "\r",
+              "pm.collectionVariables.set(\"baseUrl\", pm.request.url.toString());\r",
+              "pm.collectionVariables.set(\"epSTATUS\", \"/status\");\r",
+              "pm.collectionVariables.set(\"epBOOKS\", \"/books\");\r",
+              "pm.collectionVariables.set(\"epORDERS\", \"/orders\");\r",
+              "\r",
+              "console.log(\"Variable de Collection après\");\r",
+              "console.log(\"🔪 Initialisation des variables de collection...\");"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://simple-books-api.click",
+          "protocol": "https",
+          "host": [
+            "simple-books-api",
+            "click"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "01_Status",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://simple-books-api.click/status",
+          "protocol": "https",
+          "host": [
+            "simple-books-api",
+            "click"
+          ],
+          "path": [
+            "status"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "02_Status+Variables",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}{{epSTATUS}}",
+          "host": [
+            "{{baseURL}}{{epSTATUS}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "03_List of Books",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}{{epBOOKS}}?type=fiction&limit=3",
+          "host": [
+            "{{baseURL}}{{epBOOKS}}"
+          ],
+          "query": [
+            {
+              "key": "type",
+              "value": "fiction"
+            },
+            {
+              "key": "limit",
+              "value": "3"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "04_Get a single Book",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}{{epBOOKS}}/:bookid",
+          "host": [
+            "{{baseURL}}{{epBOOKS}}"
+          ],
+          "path": [
+            ":bookid"
+          ],
+          "variable": [
+            {
+              "key": "bookid",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "05.0_Submit an odrder",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"bookId\": 1,\r\n  \"customerName\": \"{{$randomFirstName}}\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseURL}}{{epORDERS}}",
+          "host": [
+            "{{baseURL}}{{epORDERS}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "05.1_Authentification",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n   \"clientName\": \"Fabrice B.\",\r\n   \"clientEmail\": \"fabricebraun2026@eni.com\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseURL}}/api-clients",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api-clients"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "05.2_Get all orders",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}{{epORDERS}}",
+          "host": [
+            "{{baseURL}}{{epORDERS}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "05.3_Get an order",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}{{epORDERS}}/:orderId",
+          "host": [
+            "{{baseURL}}{{epORDERS}}"
+          ],
+          "path": [
+            ":orderId"
+          ],
+          "variable": [
+            {
+              "key": "orderId",
+              "value": "4I6_jUKfLyXJctyqGRdw_"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "06_Update an order",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"customerName\": \"{{$randomFirstName}}\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseURL}}{{epORDERS}}/:orderId",
+          "host": [
+            "{{baseURL}}{{epORDERS}}"
+          ],
+          "path": [
+            ":orderId"
+          ],
+          "variable": [
+            {
+              "key": "orderId",
+              "value": "4I6_jUKfLyXJctyqGRdw_"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "08_JS_Expect (assertion)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "// Testr n°1 :\r",
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "    });\r",
+              "\r",
+              "// Test n°2 : \r",
+              "pm.test(\"Status = 2xx (positif)\", function () {\r",
+              "    pm.expect(pm.response.code).to.be.within(200, 299);\r",
+              "    });\r",
+              "// Testr n°3 :\r",
+              "const limit = 250 // Valeur limite de temps de réponse.\r",
+              "pm.test(`Response time is less than ${limit}`, function () {\r",
+              "    pm.expect(pm.response.responseTime).to.be.below(limit);\r",
+              "});\r",
+              "\r",
+              "const responseBody = pm.response.json();\r",
+              "// Test n°4\r",
+              "pm.test(\"Elément Status est présent\", function () {\r",
+              "    pm.expect(responseBody).to.have.property('status');\r",
+              "});\r",
+              "\r",
+              "// Test n°5\r",
+              "\r",
+              "pm.test(\"La valeur du  Status dans la réponse\", function () {\r",
+              "    pm.expect(responseBody.status).to.equal('OK');\r",
+              "});\r",
+              "\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}{{epSTATUS}}",
+          "host": [
+            "{{baseURL}}{{epSTATUS}}"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "56501816eee73444f94d1736ab37715fdd89fd39e39d55d82de6693b7ba671d4",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseURL",
+      "value": ""
+    },
+    {
+      "key": "epSTATUS",
+      "value": ""
+    },
+    {
+      "key": "epBOOKS",
+      "value": ""
+    },
+    {
+      "key": "auth_secret_0z3f",
+      "value": ""
+    },
+    {
+      "key": "epORDERS",
+      "value": ""
+    },
+    {
+      "key": "baseUrl",
+      "value": ""
+    }
+  ]
+}
